@@ -1,5 +1,10 @@
 # Quantization
 
-*It’s all for deliverable in underlying logic.* 
+*It’s all for deliverable with hardware-friendly.*
 
-integral
+integral 
+
+|  |  |  |
+| --- | --- | --- |
+|  |  |  |
+|  |  |  |

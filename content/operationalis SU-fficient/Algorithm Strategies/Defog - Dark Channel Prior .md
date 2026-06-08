@@ -1,6 +1,6 @@
 # Defog - Dark Channel Prior
 
-*It is based on a key observation - most local patches in haze-free outdoor images contain some pixels which have very low intensities in at least one color channel.* 
+The model widely used to describe the formation of a hazy image is
 
 $I(x) = J(x)t(x) + A(1 - t(x))$
 
@@ -11,17 +11,19 @@ The first term J(x)t(x) on the right-hand side is called direct attenuation , an
 
 t is the medium transmission describing the portion of the light that is **NOT** scattered and reaches the camera. 
 
-The goal of haze removal is to recover J, A, and t from I. 
+The goal of haze removal is to recover **J, A, and t from I.** 
 From the above equation, we got the colinear system in RGB scalar like:
 
 ![image.png](Defog%20-%20Dark%20Channel%20Prior/image.png)
 
+(it’called Markov Random Field, often used in ISP filed to show random distribution of color system)
+
 $$
-I(x) - A = t(x)\,(J(x) - A)
+I(x) - A = t(x)\,(J(x) - A) *(-1)
 $$
 
 $$
-A - I(x) = t(x)\,(A - J(x))
+=> A - I(x) = t(x)\,(A - J(x))
 $$
 
 $$
@@ -33,7 +35,7 @@ t(x)= \frac{\|A - I(x)\|}{\|A - J(x)\|}
 $$
 
 $$
-A_c - I_c(x)= t(x)\,(A_c - J_c(x)) (c \in {r,g,b})
+A_c - I_c(x)= t(x)\,(A_c - J_c(x)) (c \in {r,g,b} from figure2)
 $$
 
 $$
@@ -45,7 +47,7 @@ For an N-pixel color image I, there are 3N constraints and 4N+3 unknowns.
 > [Single image haze removal using dark channel prior | IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/document/5206515)
 > 
 
-But what’s x? Is it the distance to object or the 2D location?  Is A the amplitude? what’s the relationship between A and J?
+But what’s x ①? Is it the distance to object or the 2D location?  Is A an amplitude **②**? Let split the formula in detail.
 
 ![image.png](Defog%20-%20Dark%20Channel%20Prior/image%201.png)
 
@@ -58,9 +60,9 @@ $$
 First tern is the direct attenuation, and the second term is the airlight. 
 
 I is the image intensity. 
-x is the 2D spatial location. 
-$L_{\infty}$ is the atmospheric light, which is commonly assumed to be globally constant; thus, it is independent of location x. 
-ρ is the reflectance of an object in the image. 
+① x is the 2D spatial location. 
+$L_{\infty}$(A) is the atmospheric light, which is commonly assumed to be globally constant**②, yes, it’s an amplitude**; thus, it is independent of location x. 
+ρ(x) is the reflectance of an object in the image. 
 β is the atmospheric attenuation coefficient. 
 d is the distance between an object in the image and the observer.
 
@@ -70,13 +72,47 @@ d is the distance between an object in the image and the observer.
 Now, we have the conditions:
 
 1. In the nature image, one of every RGB values is closed to zero.
-2. We saw the object, the image signal is both composed by direct attenuation and airlight.
+2. While cameras capture an object, the image signal is both composed by object direct attenuation and scattered light from everywhere(airlight).
 3. The materials we have are 
     1. x, position
     2. I, intensity
-    3. Assume the object distance d is unlimited,  $e^{-\beta d(x)}$ (t(x))is 0. 
-    I(x) = $L_{\infty}$. All signal intensity depends on the enviroment light.
-    4. Assume there is no effect of scattering particles ($e^{-\beta d(x)}$ =1)
-     I(x) = $L_{\infty}\rho(x)$, All signal intensity are equal to light reflected by object. make sense.
+    3. Assume the **object distance d is unlimited,**  $e^{-\beta d(x)}$ (t(x))is 0. 
+     $I(x)=L_{\infty}(A)$. All signal intensity depends on the enviroment light.
+    4. Assume there is **no effect of scattering particles ($e^{-\beta d(x)}$ =1)**
+      $I(x)=L_{\infty}\rho(x)(J(x))$, All signal intensity are equal to light reflected by object. make sense.
+    5. From c. and d., $t(x) \in [0,1]$  , so
+     $\|A - I(x)\| = t(x)\,\|A - J(x)\| \rightarrow\,\|A - J(x)\| >\,\|A - Ｉ(x)\|$ 
 
-Now, we undertand the limited value, how about the normal value of (t(x),  $e^{-\beta d(x)}$) (1-t(x), 1-$e^{-\beta d(x)}$)?
+***It is based on a key observation - most local patches in haze-free outdoor images contain some pixels which have very low intensities in at least one color channel.*** 
+
+$$
+J^{dark} \rightarrow 0
+$$
+
+ in haze-free image
+
+$$
+\frac{I(x)}{A} = \frac{J(x)t(x)}{A} + (1 - t(x))
+$$
+
+assume the tranmission t(x) is a constant in patch Ω, denoted as 
+
+$$
+\tilde{t}(x)
+$$
+
+$$
+\underset{y\in\Omega(x)}{min}(\underset{c}{min}\frac{I^c(y)}{A^c})(\rightarrow 0)=\tilde{t}(x)\underset{y\in\Omega(x)}{min}(\underset{c}{min}{\frac{J^c(y)}{A^c}})+1-\tilde{t}(x)
+$$
+
+$$
+\tilde{t}(x)=1-\underset{y\in\Omega(x)}{min}(\underset{c}{min}{\frac{J^c(y)}{A^c}})
+$$
+
+back to condition 3(c).the sky region(object distance is infinite) 
+
+$$
+\underset{y\in\Omega(x)}{min}(\underset{c}{min}{\frac{J^c(y)}{A^c}})\rightarrow1
+$$
+
+condition 3(d). there is **no effect of scattering particles**
