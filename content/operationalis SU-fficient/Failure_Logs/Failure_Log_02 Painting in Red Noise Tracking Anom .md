@@ -1,4 +1,4 @@
-# Failure Log #02 | Painting in Red Noise: Tracking Anomaly in Color Transform
+# Failure_Log_02 | Painting in Red Noise: Tracking Anomaly in Color Transform
 
 *Deepening Scene: Troubleshooting Patch 15 Chromatic Artifacts.*
 

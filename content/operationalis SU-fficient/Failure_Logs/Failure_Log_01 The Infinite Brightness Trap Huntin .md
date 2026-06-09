@@ -1,4 +1,4 @@
-# Failure Log #01  | The Infinite Brightness Trap: Hunting a Runaway AE Loop
+# Failure_Log_01  | The Infinite Brightness Trap: Hunting a Runaway AE Loop
 
 *Deepening Scene: When AE Works, But the Image Fades Away.*
 

@@ -7,4 +7,6 @@
 
 ### Run:
 
-[MSYS2MINGW64 and CMakeList](https://app.notion.com/p/MSYS2MINGW64-and-CMakeList-34927c1a893c80288263f01cfa4f551f?pvs=21)
+[MSYS2MINGW64 and CMakeList](Gitlab%20Stuff/MSYS2MINGW64%20and%20CMakeList%20.md)
+
+[Failure_Logs_Qaurtz](Gitlab%20Stuff/Failure_Logs_Qaurtz%20.md)

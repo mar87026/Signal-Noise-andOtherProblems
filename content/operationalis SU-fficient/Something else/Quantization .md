@@ -1,6 +1,6 @@
 # Quantization
 
-*It’s all for deliverable with hardware-friendly.*
+*It’s all for deliverable with hardware-friendly, remember, model is always matrices*
 
 integral 
 
@@ -8,3 +8,9 @@ integral
 | --- | --- | --- |
 |  |  |  |
 |  |  |  |
+
+FP32 ONNX
+↓
+TensorRT calibration
+↓
+INT8 engine
