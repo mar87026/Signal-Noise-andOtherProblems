@@ -1,8 +1,8 @@
-# Failure_Log_02 | Painting in Red Noise: Tracking Anomaly in Color Transform
+# Failure_Log_02 | Troubleshooting Red Noise in ISP Tuning: Sensor QE, Crosstalk, and Chromatic Aberration Correction
 
-*Deepening Scene: Troubleshooting Patch 15 Chromatic Artifacts.*
+*Troubleshooting withch colorchecker Patch 15*
 
-#### **Hypotheses & Root Cause Analysis:**
+## **Hypotheses & Root Cause Analysis:**
 
 1. **Sensor Nature (Low Red-CFA SNR):** 
 Red light has a longer wavelength (lower frequency) and lower photon energy (E=hv ), allowing it to penetrate deeper into the Silicon wafer. Consequently, red photons often bypass the effective photosensitive layer of the photodiode, getting absorbed deep within the substrate or drifting into adjacent pixels. This induces **optical crosstalk**, which is the fundamental physical cause of poor red Quantum Efficiency (QE) and a high noise floor. If this is sensor-inherent, White Balance (WB) gains for Red will be disproportionately high. Noise will persist across the entire grayscale spectrum (though slightly attenuated) and must be mitigated via Color Correction Matrix (CCM) tuning.
@@ -18,7 +18,7 @@ Lens dispersion compensation gone wrong. However, CAC artifacts are spatially de
 
 The worst-case scenario involving non-linearities in strict linear transformations. Typically caused by fixed-point overflow, rounding errors, or bit-depth truncation. This requires a Firmware patch/clamping protection. This type of noise usually disappears entirely in grayscale.
 
-#### **Step-by-Step Troubleshooting Pipeline:**
+## **Step-by-Step Troubleshooting Pipeline:**
 
 • **Step 1 (Isolate Sensor/CAC):** 
 
