@@ -1,6 +1,6 @@
 # Color fidelity expectations
 
-![image.png](Color%20fidelity%20expectations/image.png)
+![image.png](Color_fidelity_expectations/image.png)
 
 | Name | description |
 | --- | --- |

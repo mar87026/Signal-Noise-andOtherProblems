@@ -2,7 +2,7 @@
 
 Loss
 
-![results.png](What%E2%80%99s%20in%20report/results.png)
+![results.png](What%E2%80%99s_in_report/results.png)
 
 | train訓練/val驗證組 | value |
 | --- | --- |
@@ -18,7 +18,7 @@ Loss
 | mAP 0.5 | mean Average Precision 平均精確率 IoU>0.5算抓對 |
 | mAP 0.5:0.95 | 對maP 0.5 0.55 0.6...0.95共十個門檻取平均 |
 
-![image.png](What%E2%80%99s%20in%20report/image.png)
+![image.png](What%E2%80%99s_in_report/image.png)
 
 |  |  |
 | --- | --- |

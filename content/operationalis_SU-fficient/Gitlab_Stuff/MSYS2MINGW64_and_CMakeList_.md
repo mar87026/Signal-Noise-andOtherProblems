@@ -50,4 +50,4 @@ if(MINGW)
 endif()
 ```
 
-[CMAKE](MSYS2MINGW64%20and%20CMakeList/CMAKE%20.md)
+[CMAKE](MSYS2MINGW64_and_CMakeList/CMAKE_.md)

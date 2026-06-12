@@ -48,8 +48,8 @@
 | --- | --- |
 | weights  |  |
 
-![image.png](Classic%20Model%20-%20YOLOv3/image.png)
+![image.png](Classic_Model_-_YOLOv3/image.png)
 
-[Yolov3 C-Model 解析 - 讀取與建立](Classic%20Model%20-%20YOLOv3/Yolov3%20C-Model%20%E8%A7%A3%E6%9E%90%20-%20%E8%AE%80%E5%8F%96%E8%88%87%E5%BB%BA%E7%AB%8B%20.md)
+[Yolov3 C-Model 解析 - 讀取與建立](Classic_Model_-_YOLOv3/Yolov3_C-Model_%E8%A7%A3%E6%9E%90_-_%E8%AE%80%E5%8F%96%E8%88%87%E5%BB%BA%E7%AB%8B_.md)
 
-[Yolov3 C-Model 解析 - 偵測](Classic%20Model%20-%20YOLOv3/Yolov3%20C-Model%20%E8%A7%A3%E6%9E%90%20-%20%E5%81%B5%E6%B8%AC%20.md)
+[Yolov3 C-Model 解析 - 偵測](Classic_Model_-_YOLOv3/Yolov3_C-Model_%E8%A7%A3%E6%9E%90_-_%E5%81%B5%E6%B8%AC_.md)

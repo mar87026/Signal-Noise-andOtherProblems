@@ -2,27 +2,27 @@
 
 *Don't wait until you "know everything" to challenge. You will never know everything.*
 
-[Classification-Nearest Neighbors](Something%20else/Classification-Nearest%20Neighbors%20.md)
+[Classification-Nearest Neighbors](Something_else/Classification-Nearest_Neighbors_.md)
 
-[Classification-hyperplane](Something%20else/Classification-hyperplane%20.md)
+[Classification-hyperplane](Something_else/Classification-hyperplane_.md)
 
-[Depthwise Separable Convolution](Something%20else/Depthwise%20Separable%20Convolution%20.md)
+[Depthwise Separable Convolution](Something_else/Depthwise_Separable_Convolution_.md)
 
-[Linear Classification](Something%20else/Linear%20Classification%20.md)
+[Linear Classification](Something_else/Linear_Classification_.md)
 
-[Classic Model - YOLOv3](Something%20else/Classic%20Model%20-%20YOLOv3%20.md)
+[Classic Model - YOLOv3](Something_else/Classic_Model_-_YOLOv3_.md)
 
-[Classic Model - BlazeFace](Something%20else/Classic%20Model%20-%20BlazeFace%20.md)
+[Classic Model - BlazeFace](Something_else/Classic_Model_-_BlazeFace_.md)
 
-[LOSS](Something%20else/LOSS%20.md)
+[LOSS](Something_else/LOSS_.md)
 
-[What’s in report](Something%20else/What%E2%80%99s%20in%20report%20.md)
+[What’s in report](Something_else/What%E2%80%99s_in_report_.md)
 
-[TroubleShooting](Something%20else/TroubleShooting%20.md)
+[TroubleShooting](Something_else/TroubleShooting_.md)
 
-[Quantization](Something%20else/Quantization%20.md)
+[Quantization](Something_else/Quantization_.md)
 
-[Besides the Training ](Something%20else/Besides%20the%20Training%20.md)
+[Besides the Training ](Something_else/Besides_the_Training_.md)
 
 | Item |  |
 | --- | --- |

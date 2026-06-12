@@ -20,7 +20,7 @@ From the above equation, we got the colinear system in RGB scalar like:
 
 ---
 
-![image.png](Defog%20-%20Dark_Channel_Prior_2%20Basic%20model%20and%20Cover/image.png)
+![image.png](Defog_-_Dark_Channel_Prior_2_Basic_model_and_Cover/image.png)
 
 (it’called Markov Random Field, often used in ISP filed to show random distribution of color system)
 
@@ -55,7 +55,7 @@ For an N-pixel color image I, there are 3N constraints and 4N+3 unknowns.
 
 [But what’s x ①? Is it the distance to object or the 2D location?  Is A an amplitude **②**?] Let split the formula in detail.
 
-![image.png](Defog%20-%20Dark_Channel_Prior_2%20Basic%20model%20and%20Cover/image%201.png)
+![image.png](Defog_-_Dark_Channel_Prior_2_Basic_model_and_Cover/image_1.png)
 
 The optical model of the bad weather derived into two terns:
 

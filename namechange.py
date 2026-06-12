@@ -11,11 +11,9 @@ def deep_clean():
         print(content_dir)
         return
 
-    
-    # 儲存舊名到新名的映射，用於修復內容連結
     name_map = []
 
-    # 階段 1: 建立對照表並修改檔案內容
+    # build up name_map and re-name setense within files
     for root, dirs, files in os.walk(content_dir):
         for filename in files:
             if filename.endswith(".md"):
@@ -36,7 +34,7 @@ def deep_clean():
                 f.write("---\n")
                 f.write(f"title: {os.path.basename(root)}\n")
                 f.write("---\n")
-
+    #rename file
     for root, dirs, files in os.walk(content_dir):
         for filename in files:
             if filename.endswith(".md"):
@@ -48,33 +46,39 @@ def deep_clean():
                 for old_val in name_map:
                     if old_val in new_content:
                         new_content = new_content.replace(old_val, "")
-                    if "%20" in new_content:
-                        new_content = new_content.replace("%20", "_")
-
+                if '%20' in new_content:
+                    new_content = new_content.replace('%20', "_")
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:
                         f.write(new_content)
-                    print(f"已更新連結: {filename}")
+                    print(f"update: {filename}")
 
     for root, dirs, files in os.walk(content_dir, topdown=False):
    
         for file in files:
-            cut_name = file.split(' ')
+            cut_name = file.split(' ')          
             if len(cut_name) < 2:
                 continue
-            
+            #rename file
             remove_target = os.path.splitext(cut_name[-1])[0]
+            new_name = file
             if remove_target in name_map:
                 new_name = re.sub(remove_target, "", file)
+            new_name = re.sub('\s+', '_', new_name)
+            if new_name != file:
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
 
-        # 改資料夾名 (Notion 匯出的圖片資料夾通常也帶 UUID)
-        for name in dirs:
-            cut_name = name.split(' ')
+        # rename folder
+        for dir_name in dirs:
+            cut_name = dir_name.split(' ')
+            new_name = dir_name
+           
             remove_target = os.path.splitext(cut_name[-1])[0]            
             if remove_target in name_map:
-                new_name = re.sub(remove_target, "", file)
-                os.rename(os.path.join(root, file), os.path.join(root, new_name))
+                new_name = re.sub(remove_target, "", dir_name)
+            new_name = re.sub('\s+', "_", new_name) 
+            if new_name != dir_name:
+                os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
 
 
 if __name__ == "__main__":

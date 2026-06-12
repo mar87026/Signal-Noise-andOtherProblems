@@ -7,6 +7,6 @@
 
 ### Run:
 
-[MSYS2MINGW64 and CMakeList](Gitlab%20Stuff/MSYS2MINGW64%20and%20CMakeList%20.md)
+[MSYS2MINGW64 and CMakeList](Gitlab_Stuff/MSYS2MINGW64_and_CMakeList_.md)
 
-[Failure_Logs_Qaurtz](Gitlab%20Stuff/Failure_Logs_Qaurtz%20.md)
+[Failure_Logs_Qaurtz](Gitlab_Stuff/Failure_Logs_Qaurtz_.md)
