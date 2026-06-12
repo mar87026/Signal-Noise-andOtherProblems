@@ -36,9 +36,6 @@ def deep_clean():
                 f.write("---\n")
                 f.write(f"title: {os.path.basename(root)}\n")
                 f.write("---\n")
-    
-    # 階段 2: 進入檔案內部修復連結
-    print(f"正在修正內部連結（共 {len(name_map)} 個對應關係）...")
 
     for root, dirs, files in os.walk(content_dir):
         for filename in files:
@@ -51,13 +48,13 @@ def deep_clean():
                 for old_val in name_map:
                     if old_val in new_content:
                         new_content = new_content.replace(old_val, "")
+                    if "%20" in new_content:
+                        new_content = new_content.replace("%20", "_")
 
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:
                         f.write(new_content)
                     print(f"已更新連結: {filename}")
-
-    # 階段 3: 修改檔案名稱 (從最深層開始改，避免路徑失效)
 
     for root, dirs, files in os.walk(content_dir, topdown=False):
    
@@ -65,11 +62,12 @@ def deep_clean():
             cut_name = file.split(' ')
             if len(cut_name) < 2:
                 continue
+            
             remove_target = os.path.splitext(cut_name[-1])[0]
             if remove_target in name_map:
                 new_name = re.sub(remove_target, "", file)
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
-        
+
         # 改資料夾名 (Notion 匯出的圖片資料夾通常也帶 UUID)
         for name in dirs:
             cut_name = name.split(' ')
