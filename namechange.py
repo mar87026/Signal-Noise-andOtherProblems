@@ -27,7 +27,16 @@ def deep_clean():
                 new_name_no_ext = re.sub(cut_name[-1], "", old_name_no_ext)
                 if old_name_no_ext != new_name_no_ext:
                     name_map.append(cut_name[-1])
-
+        #check index.md is exist
+        if "index.md" in files:
+            pass
+        else:
+            full_path = os.path.join(root, "index.md")
+            with open(full_path, 'w', encoding='utf-8') as f:
+                f.write("---\n")
+                f.write(f"title: {os.path.basename(root)}\n")
+                f.write("---\n")
+    
     # 階段 2: 進入檔案內部修復連結
     print(f"正在修正內部連結（共 {len(name_map)} 個對應關係）...")
 
