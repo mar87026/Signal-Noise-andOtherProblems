@@ -1,3 +1,3 @@
 ---
-title: Tuning & Debugging
+title: tuning & debugging
 ---

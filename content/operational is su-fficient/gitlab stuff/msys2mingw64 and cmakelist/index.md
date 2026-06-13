@@ -1,3 +1,3 @@
 ---
-title: MSYS2MINGW64 and CMakeList
+title: msys2mingw64 and cmakelist
 ---

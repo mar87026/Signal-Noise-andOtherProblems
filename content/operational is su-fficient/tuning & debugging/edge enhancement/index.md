@@ -1,3 +1,3 @@
 ---
-title: Edge Enhancement
+title: edge enhancement
 ---

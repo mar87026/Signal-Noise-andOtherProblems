@@ -1,3 +1,3 @@
 ---
-title: Gitlab Stuff
+title: gitlab stuff
 ---

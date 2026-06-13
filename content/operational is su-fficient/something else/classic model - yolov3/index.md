@@ -1,3 +1,3 @@
 ---
-title: Classic Model - YOLOv3
+title: classic model - yolov3
 ---

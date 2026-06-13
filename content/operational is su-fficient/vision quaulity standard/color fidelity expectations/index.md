@@ -1,3 +1,3 @@
 ---
-title: Color fidelity expectations
+title: color fidelity expectations
 ---

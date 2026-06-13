@@ -1,3 +1,3 @@
 ---
-title: Quantization
+title: quantization
 ---

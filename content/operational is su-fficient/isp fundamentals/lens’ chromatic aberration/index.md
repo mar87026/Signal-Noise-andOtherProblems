@@ -1,3 +1,3 @@
 ---
-title: Lens’ Chromatic Aberration
+title: lens’ chromatic aberration
 ---

@@ -1,3 +1,3 @@
 ---
-title: operational is SU-fficient
+title: operational is su-fficient
 ---

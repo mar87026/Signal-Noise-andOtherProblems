@@ -1,3 +1,3 @@
 ---
-title: Something else
+title: something else
 ---

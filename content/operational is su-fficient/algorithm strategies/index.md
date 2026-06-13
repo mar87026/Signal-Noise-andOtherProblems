@@ -1,3 +1,3 @@
 ---
-title: Algorithm Strategies
+title: algorithm strategies
 ---

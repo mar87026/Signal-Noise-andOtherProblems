@@ -1,3 +1,3 @@
 ---
-title: Classification-Nearest Neighbors
+title: classification-nearest neighbors
 ---

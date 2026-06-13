@@ -1,3 +1,3 @@
 ---
-title: Failure_Logs
+title: failure_logs
 ---

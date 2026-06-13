@@ -1,3 +1,3 @@
 ---
-title: Defog - Dark_Channel_Prior_2 Basic model and Cover
+title: defog - dark_channel_prior_2 basic model and cover
 ---
