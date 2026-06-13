@@ -1,3 +1,0 @@
----
-title: operationalis SU-fficient
----

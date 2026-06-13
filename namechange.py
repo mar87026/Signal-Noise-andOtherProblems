@@ -25,7 +25,6 @@ def deep_clean():
                 new_name_no_ext = re.sub(' '+cut_name[-1], "", old_name_no_ext)
                 if old_name_no_ext != new_name_no_ext:
                     new_name_no_ext = re.sub(' ', '_', new_name_no_ext)
-                    new_name_no_ext = new_name_no_ext.lower()
                     name_map[old_name_no_ext] = new_name_no_ext
                     old_name_no_ext = re.sub(' ', '%20', old_name_no_ext)
                     name_map[old_name_no_ext] = new_name_no_ext
@@ -53,6 +52,7 @@ def deep_clean():
                         new_content = new_content.replace(keys, name_map[keys])
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:
+                        new_content = new_content.lower()
                         f.write(new_content)
                     print(f"update: {filename}")
 
@@ -67,7 +67,7 @@ def deep_clean():
             new_name = file
             if remove_target in name_map:
                 new_name = re.sub(remove_target, name_map[remove_target], file)
-
+            new_name = new_name.lower()
             if new_name != file:
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
 
@@ -79,6 +79,7 @@ def deep_clean():
             remove_target = os.path.splitext(dir_name)[0]            
             if remove_target in name_map:
                 new_name = re.sub(remove_target, name_map[remove_target], dir_name)
+            new_name = new_name.lower()
             if new_name != dir_name:
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
 

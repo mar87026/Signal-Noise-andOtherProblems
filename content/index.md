@@ -1,26 +1,26 @@
-# operationalis SU-fficient
+# operational is su-fficient
 
-*This space is mainly for documenting the bits of knowledge and field experience that are easy to lose over time.
-Keep adding notes whenever new issues show up , which, in troubleshooting work, is basically all the time.*
+*this space is mainly for documenting the bits of knowledge and field experience that are easy to lose over time.
+keep adding notes whenever new issues show up , which, in troubleshooting work, is basically all the time.*
 
-[Vision Quaulity Standard](operationalis%20SU-fficient/vision_quaulity_standard.md)
+[vision quaulity standard](operational%20is%20su-fficient/vision_quaulity_standard.md)
 
-[ISP Fundamentals](operationalis%20SU-fficient/isp_fundamentals.md)
+[isp fundamentals](operational%20is%20su-fficient/isp_fundamentals.md)
 
-[Algorithm Strategies](operationalis%20SU-fficient/algorithm_strategies.md)
+[algorithm strategies](operational%20is%20su-fficient/algorithm_strategies.md)
 
-[Tuning & Debugging](operationalis%20SU-fficient/tuning_&_debugging.md)
+[tuning & debugging](operational%20is%20su-fficient/tuning_&_debugging.md)
 
-[Inspiration as Flicker](operationalis%20SU-fficient/inspiration_as_flicker.md)
+[inspiration as flicker](operational%20is%20su-fficient/inspiration_as_flicker.md)
 
-[Failure_Logs](operationalis%20SU-fficient/failure_logs.md)
+[failure_logs](operational%20is%20su-fficient/failure_logs.md)
 
-[Something else](operationalis%20SU-fficient/something_else.md)
+[something else](operational%20is%20su-fficient/something_else.md)
 
-[Gitlab Stuff](operationalis%20SU-fficient/gitlab_stuff.md)
+[gitlab stuff](operational%20is%20su-fficient/gitlab_stuff.md)
 
-Contact: [LinkedIn](https://www.linkedin.com/in/susu-li-a6156114b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app), I am happy to say Hi.
+contact: [linkedin](https://www.linkedin.com/in/susu-li-a6156114b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app), i am happy to say hi.
 
-Storage: [Gitlab](https://gitlab.com/mar87026/VideoTool), but staff is not ready
+storage: [gitlab](https://gitlab.com/mar87026/videotool), but staff is not ready
 
-Mail: [mar87026@gmail.com](mailto:mar87026@gmail.com)
+mail: [mar87026@gmail.com](mailto:mar87026@gmail.com)
