@@ -1,3 +1,0 @@
----
-title: vision quaulity standard
----

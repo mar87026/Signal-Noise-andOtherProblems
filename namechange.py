@@ -45,9 +45,7 @@ def deep_clean():
         else:
             full_path = os.path.join(root, "index.md")
             with open(full_path, 'w', encoding='utf-8') as f:
-                f.write("---\n")
-                f.write(f"title: {os.path.basename(root)}\n")
-                f.write("---\n")
+                pass
     #rename content
     for root, dirs, files in os.walk(content_dir):
         for filename in files:
