@@ -1,15 +1,15 @@
-# tuning & debugging
+# Tuning & Debugging
 
-*rememeber: algorithm and tuning are different.*
+*Rememeber: Algorithm and Tuning are different.*
 
-[color](tuning%20&%20debugging/color.md)
+[Color](tuning%20&%20debugging/color.md)
 
-[edge enhancement](tuning%20&%20debugging/edge_enhancement.md)
+[Edge Enhancement](tuning%20&%20debugging/edge_enhancement.md)
 
-[hdr](tuning%20&%20debugging/hdr.md)
+[HDR](tuning%20&%20debugging/hdr.md)
 
-[3a](tuning%20&%20debugging/3a.md)
+[3A](tuning%20&%20debugging/3a.md)
 
-[color transform](tuning%20&%20debugging/color_transform.md)
+[Color Transform](tuning%20&%20debugging/color_transform.md)
 
-[fast root cause isolation for image quality issues](tuning%20&%20debugging/fast_root_cause_isolation_for_image_quality_issues.md)
+[Fast Root Cause Isolation for Image Quality Issues](tuning%20&%20debugging/fast_root_cause_isolation_for_image_quality_issues.md)

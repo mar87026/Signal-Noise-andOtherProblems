@@ -1,11 +1,11 @@
-# failure_logs
+# Failure_Logs
 
-*the crash daily, i mean my self.*
+*The crash daily, I mean my self.*
 
-[failure_log_01 | debugging isp video stream corruption: hardware failure vs. auto exposure (ae) loop runaway](failure_logs/failure_log_01_debugging_isp_video_stream_corrupti.md)
+[Failure_Log_01 | Debugging ISP Video Stream Corruption: Hardware Failure vs. Auto Exposure (AE) Loop Runaway](failure_logs/failure_log_01_debugging_isp_video_stream_corrupti.md)
 
-[**failure_log_02 | troubleshooting red noise in isp tuning: sensor qe, crosstalk, and chromatic aberration correction**](failure_logs/failure_log_02_troubleshooting_red_noise_in_isp_tu.md)
+[**Failure_Log_02 | Troubleshooting Red Noise in ISP Tuning: Sensor QE, Crosstalk, and Chromatic Aberration Correction**](failure_logs/failure_log_02_troubleshooting_red_noise_in_isp_tu.md)
 
-[failure_log_03 | resolving ic register address decoding errors via real-time readback](failure_logs/failure_log_03_resolving_ic_register_address_decod.md)
+[Failure_Log_03 | Resolving IC Register Address Decoding Errors via Real-Time Readback](failure_logs/failure_log_03_resolving_ic_register_address_decod.md)
 
-[failure_log_04 | resolving texture mottling in 3d reconstruction: a logic-driven approach over hardware calibration](failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re.md)
+[Failure_Log_04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration](failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re.md)

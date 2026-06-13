@@ -1,12 +1,12 @@
-# gitlab stuff
+# Gitlab Stuff
 
-- [x]  load file with unique_ptr and align to keep the memory leak
-- [ ]  load one, process one.
-- [ ]  2d wavelet
-- [ ]  lanzcos up
+- [x]  Load File with unique_ptr and align to keep the memory leak
+- [ ]  Load one, process one.
+- [ ]  2D wavelet
+- [ ]  Lanzcos up
 
-### run:
+### Run:
 
-[msys2mingw64 and cmakelist](gitlab%20stuff/msys2mingw64_and_cmakelist.md)
+[MSYS2MINGW64 and CMakeList](gitlab%20stuff/msys2mingw64_and_cmakelist.md)
 
-[failure_logs_qaurtz](gitlab%20stuff/failure_logs_qaurtz.md)
+[Failure_Logs_Qaurtz](gitlab%20stuff/failure_logs_qaurtz.md)

@@ -1,9 +1,9 @@
-# algorithm strategies
+# Algorithm Strategies
 
-*module ordering in algorithm design should be cost-driven, while isp debugging must follow signal dependency.*
+*Module Ordering in Algorithm Design Should Be Cost-Driven, While ISP Debugging Must Follow Signal Dependency.*
 
 ![image.png](algorithm%20strategies/image.png)
 
-[defog - dark_channel_prior_2:basic model and cover by object distance](algorithm%20strategies/defog_-_dark_channel_prior_2_basic_model_and_cover.md)
+[Defog - Dark_Channel_Prior_2:Basic model and Cover by Object Distance](algorithm%20strategies/defog_-_dark_channel_prior_2_basic_model_and_cover.md)
 
-[hidden cost - sorting](algorithm%20strategies/hidden_cost_-_sorting.md)
+[Hidden Cost - Sorting](algorithm%20strategies/hidden_cost_-_sorting.md)

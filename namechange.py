@@ -4,6 +4,15 @@ import re
 # 設定目標目錄
 current_dir = os.getcwd()
 content_dir = os.path.join(current_dir, "content")
+def to_lower_path(match):
+    title = match.group(1)  # 抓取 [標題]
+    path = match.group(2)  # 抓取 (路徑)
+    return f"[{title}]({path.lower()})"
+
+
+# 3. 使用正則表達式物理匹配所有的 [文字](路徑) 格式
+# \[([^\]]+)\]  -> 匹配 [中括號內的任意文字]
+# \(([^)]+)\)    -> 匹配 (小括號內的路徑)
 
 
 def deep_clean():
@@ -25,6 +34,7 @@ def deep_clean():
                 new_name_no_ext = re.sub(' '+cut_name[-1], "", old_name_no_ext)
                 if old_name_no_ext != new_name_no_ext:
                     new_name_no_ext = re.sub(' ', '_', new_name_no_ext)
+                    new_name_no_ext = new_name_no_ext.lower()
                     name_map[old_name_no_ext] = new_name_no_ext
                     old_name_no_ext = re.sub(' ', '%20', old_name_no_ext)
                     name_map[old_name_no_ext] = new_name_no_ext
@@ -52,7 +62,7 @@ def deep_clean():
                         new_content = new_content.replace(keys, name_map[keys])
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:
-                        new_content = new_content.lower()
+                        new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)
                         f.write(new_content)
                     print(f"update: {filename}")
 
