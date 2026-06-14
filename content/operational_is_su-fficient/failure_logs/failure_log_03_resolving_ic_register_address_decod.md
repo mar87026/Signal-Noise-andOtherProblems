@@ -1,4 +1,4 @@
-# Failure_Log_03 | Resolving IC Register Address Decoding Errors via Real-Time Readback
+# Failure Log 03 | Resolving IC Register Address Decoding Errors via Real-Time Readback
 
 *“underlying logic”*
 

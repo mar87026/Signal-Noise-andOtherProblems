@@ -13,7 +13,7 @@ Keep adding notes whenever new issues show up , which, in troubleshooting work, 
 
 [Inspiration as Flicker](operational_is_su-fficient/inspiration_as_flicker.md)
 
-[Failure_Logs](operational_is_su-fficient/failure_logs.md)
+[Failure Logs](operational_is_su-fficient/failure_logs.md)
 
 [Something else](operational_is_su-fficient/something_else.md)
 

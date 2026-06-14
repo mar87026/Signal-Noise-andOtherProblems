@@ -1,4 +1,4 @@
-# Failure_Log_04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration
+# Failure Log 04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration
 
 *Watch your step but don’t glue on it*
 

@@ -1,4 +1,4 @@
-# Failure_Log_01 | Debugging ISP Video Stream Corruption: Hardware Failure vs. Auto Exposure (AE) Loop Runaway
+# Failure Log 01 | Debugging ISP Video Stream Corruption: Hardware Failure vs. Auto Exposure (AE) Loop Runaway
 
 *When AE Works, But the Image Fades Away.*
 

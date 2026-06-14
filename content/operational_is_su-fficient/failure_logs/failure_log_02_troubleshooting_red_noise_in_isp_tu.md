@@ -1,4 +1,4 @@
-# Failure_Log_02 | Troubleshooting Red Noise in ISP Tuning: Sensor QE, Crosstalk, and Chromatic Aberration Correction
+# Failure Log 02 | Troubleshooting Red Noise in ISP Tuning: Sensor QE, Crosstalk, and Chromatic Aberration Correction
 
 *Troubleshooting withch colorchecker Patch 15*
 
