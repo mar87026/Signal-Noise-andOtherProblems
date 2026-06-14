@@ -39,9 +39,11 @@ def deep_clean():
                     name_map[old_name_no_ext] = new_name_no_ext
                     old_name_no_ext = re.sub(' ', '%20', old_name_no_ext)
                     name_map[old_name_no_ext] = new_name_no_ext
+        """
         if not os.path.exists(os.path.join(root, 'index.md')):
             with open(os.path.join(root, 'index.md'), 'w', encoding='utf-8') as f:
                 pass
+                """
     
     #rename content
     for root, dirs, files in os.walk(content_dir): 
