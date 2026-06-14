@@ -41,9 +41,7 @@ def deep_clean():
                     name_map[old_name_no_ext] = new_name_no_ext
         if not os.path.exists('index.md'):
             with open('index.md', 'w', encoding='utf-8') as f:
-                f.write("---\n")
-                f.write(f"title: {dir_name}\n")
-                f.write("---\n") 
+                pass
     
     #rename content
     for root, dirs, files in os.walk(content_dir): 
