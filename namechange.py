@@ -1,13 +1,14 @@
 import os
 import re
-
+import shutil
 # 設定目標目錄
 current_dir = os.getcwd()
 content_dir = os.path.join(current_dir, "content")
 def to_lower_path(match):
     title = match.group(1)  # 抓取 [標題]
     path = match.group(2)  # 抓取 (路徑)
-    return f"[{title}]({path.lower()})"
+    path_out = re.sub('%20', '_', path)
+    return f"[{title}]({path_out.lower()})"
 
 
 # 3. 使用正則表達式物理匹配所有的 [文字](路徑) 格式
@@ -38,16 +39,14 @@ def deep_clean():
                     name_map[old_name_no_ext] = new_name_no_ext
                     old_name_no_ext = re.sub(' ', '%20', old_name_no_ext)
                     name_map[old_name_no_ext] = new_name_no_ext
-                    
-        #check index.md is exist
-        if "index.md" in files:
-            pass
-        else:
-            full_path = os.path.join(root, "index.md")
-            with open(full_path, 'w', encoding='utf-8') as f:
-                pass
+        if not os.path.exists('index.md'):
+            with open('index.md', 'w', encoding='utf-8') as f:
+                f.write("---\n")
+                f.write(f"title: {dir_name}\n")
+                f.write("---\n") 
+    
     #rename content
-    for root, dirs, files in os.walk(content_dir):
+    for root, dirs, files in os.walk(content_dir): 
         for filename in files:
             if filename.endswith(".md"):
                 file_path = os.path.join(root, filename)
@@ -88,6 +87,7 @@ def deep_clean():
             if remove_target in name_map:
                 new_name = re.sub(remove_target, name_map[remove_target], dir_name)
             new_name = new_name.lower()
+            new_name = re.sub(' ', '_', new_name)
             if new_name != dir_name:
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
 
