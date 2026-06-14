@@ -2,8 +2,8 @@
 
 *ISP Tuning and Algorithm Design Are Two Different Disciplines*
 
-[Sensor’s Noise Behavior](ISP%20Fundamentals/Sensor%E2%80%99s%20Noise%20Behavior%2035727c1a893c80babb55f1ab17dcb488.md)
+[Sensor’s Noise Behavior](isp_fundamentals/sensor%e2%80%99s_noise_behavior_35727c1a893c80babb55f1ab17dcb488.md)
 
-[Lens’ Chromatic Aberration](ISP%20Fundamentals/Lens%E2%80%99%20Chromatic%20Aberration%2035727c1a893c809088a2f42df46496a3.md)
+[Lens’ Chromatic Aberration](isp_fundamentals/lens%e2%80%99_chromatic_aberration_35727c1a893c809088a2f42df46496a3.md)
 
-[What’s Dynamic Range](ISP%20Fundamentals/What%E2%80%99s%20Dynamic%20Range%2035727c1a893c80f0a6affcd401e9114d.md)
+[What’s Dynamic Range](isp_fundamentals/what%e2%80%99s_dynamic_range_35727c1a893c80f0a6affcd401e9114d.md)

@@ -7,7 +7,7 @@ graph TD
   **拍攝照片** --> |**計算ROI|Edge_Spread_Function --> |Differential|Line_Spread_Function --> |FFT|Modulation_Transfer_Function**
 ```
 
-![image.png](Edge%20Enhancement/image.png)
+![image.png](edge_enhancement/image.png)
 
 detailed slanted-edge
 

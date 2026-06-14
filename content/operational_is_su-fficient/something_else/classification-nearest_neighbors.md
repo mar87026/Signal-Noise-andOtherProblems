@@ -23,11 +23,11 @@ K-NN 則為其變化型: 由K決定 和目標最近的K個訓練資料屬於哪�
 
 但KNN基本不用在圖像，因為數據太大、(訓練量隨RGB成為立方倍)且L2對於圖片變化不大有反應
 
-![image.png](Classification-Nearest%20Neighbors/image.png)
+![image.png](classification-nearest_neighbors/image.png)
 
 這是訓練圖集的k =1分類，可以看出中心黃色區域只要在範圍內就是黃色分類，稍微偏一點就是綠色
 
-![image.png](Classification-Nearest%20Neighbors/image%201.png)
+![image.png](classification-nearest_neighbors/image_1.png)
 
 白色部分交由演算法決定它該是哪個分類
 

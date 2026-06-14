@@ -1,3 +1,3 @@
 # RCCC
 
-![image.png](RCCC/image.png)
+![image.png](rccc/image.png)

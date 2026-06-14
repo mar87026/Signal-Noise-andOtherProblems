@@ -55,11 +55,10 @@ def deep_clean():
                 for keys in name_map:
                     if keys in new_content:
                         new_content = new_content.replace(keys, name_map[keys])
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)
                 if new_content != content:
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)
+                    with open(file_path, "w", encoding="utf-8") as f:                
                         f.write(new_content)
-                    print(f"update: {filename}")
 
     for root, dirs, files in os.walk(content_dir, topdown=False):
    
