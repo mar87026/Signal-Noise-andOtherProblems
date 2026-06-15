@@ -8,13 +8,11 @@ def to_lower_path(match):
     title = match.group(1)  # 抓取 [標題]
     path = match.group(2)  # 抓取 (路徑)
     path_out = re.sub('%20', '_', path)
+    path_out = re.sub(' ', '_', path_out)
     return f"[{title}]({path_out.lower()})"
-
-
 # 3. 使用正則表達式物理匹配所有的 [文字](路徑) 格式
 # \[([^\]]+)\]  -> 匹配 [中括號內的任意文字]
 # \(([^)]+)\)    -> 匹配 (小括號內的路徑)
-
 
 def deep_clean():
     if not os.path.exists(content_dir):
@@ -52,7 +50,26 @@ def deep_clean():
                 for keys in name_map:
                     if keys in new_content:
                         new_content = new_content.replace(keys, name_map[keys])
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)
+                def link_update(match):
+                    text_content = match.group(1)
+                    path_content = match.group(2)
+                    root_parts = root.replace("\\", "/").split("/")
+
+                    target_dir = path_content.split("/")[0]
+
+                    if os.path.exists(os.path.join(root.replace("\\", "/"), target_dir)):
+                        idx = root_parts.index('content')
+                        prefix_parts = root_parts[idx+1:]
+                        
+                        if prefix_parts:
+                            prefix = "/" + "/".join(prefix_parts) + "/"
+                        else:
+                            prefix = "/"
+
+                        return f"[{text_content}]({prefix}{path_content})"
+                    return match.group(0)
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_update, new_content)
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)                
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:                
                         f.write(new_content)
