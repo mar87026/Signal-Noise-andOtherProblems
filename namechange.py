@@ -1,13 +1,16 @@
 import os
 import re
 import shutil
-# 設定目標目錄
+from pathlib import Path
+
 current_dir = os.getcwd()
 content_dir = os.path.join(current_dir, "content")
+
 def to_lower_path(match):
     title = match.group(1)  # 抓取 [標題]
     path = match.group(2)  # 抓取 (路徑)
     path_out = re.sub('%20', '_', path)
+    path_out = re.sub('%E2%80%99', "'", path_out)
     path_out = re.sub(' ', '_', path_out)
     return f"[{title}]({path_out.lower()})"
 # 3. 使用正則表達式物理匹配所有的 [文字](路徑) 格式
@@ -19,7 +22,7 @@ def deep_clean():
         print(content_dir)
         return
     
-    name_map = {}
+    name_map = []
 
     # build up name_map and check index.md
     for root, dirs, files in os.walk(content_dir):
@@ -30,14 +33,8 @@ def deep_clean():
                 cut_name = old_name_no_ext.split(' ')
                 if len(cut_name) < 2:
                     continue
-                new_name_no_ext = re.sub(' '+cut_name[-1], "", old_name_no_ext)
-                if old_name_no_ext != new_name_no_ext:
-                    new_name_no_ext = re.sub(' ', '_', new_name_no_ext)
-                    new_name_no_ext = new_name_no_ext.lower()
-                    name_map[old_name_no_ext] = new_name_no_ext
-                    old_name_no_ext = re.sub(' ', '%20', old_name_no_ext)
-                    name_map[old_name_no_ext] = new_name_no_ext
-    
+                name_map.append(cut_name[-1])
+
     #rename content
     for root, dirs, files in os.walk(content_dir): 
         for filename in files:
@@ -45,11 +42,13 @@ def deep_clean():
                 file_path = os.path.join(root, filename)
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                
+
                 new_content = content
+
                 for keys in name_map:
                     if keys in new_content:
-                        new_content = new_content.replace(keys, name_map[keys])
+                        new_content = new_content.replace('%20'+keys, '')
+                
                 def link_update(match):
                     text_content = match.group(1)
                     path_content = match.group(2)
@@ -60,7 +59,7 @@ def deep_clean():
                     if os.path.exists(os.path.join(root.replace("\\", "/"), target_dir)):
                         idx = root_parts.index('content')
                         prefix_parts = root_parts[idx+1:]
-                        
+
                         if prefix_parts:
                             prefix = "/" + "/".join(prefix_parts) + "/"
                         else:
@@ -68,24 +67,24 @@ def deep_clean():
 
                         return f"[{text_content}]({prefix}{path_content})"
                     return match.group(0)
+
                 new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_update, new_content)
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)                
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)             
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:                
                         f.write(new_content)
-                
 
     for root, dirs, files in os.walk(content_dir, topdown=False):
    
         for file in files:
-            cut_name = file.split(' ')          
+            cut_name = os.path.splitext(file)[0].split(' ')
             if len(cut_name) < 2:
                 continue
             #rename file
-            remove_target = os.path.splitext(file)[0]
+            remove_target = cut_name[-1]
             new_name = file
             if remove_target in name_map:
-                new_name = re.sub(remove_target, name_map[remove_target], file)
+                new_name = re.sub(' ' + remove_target, '', file)
             new_name = new_name.lower()
             new_name = re.sub(' ', '_', new_name)
             if new_name != file:
@@ -96,14 +95,20 @@ def deep_clean():
             cut_name = dir_name.split(' ')
             new_name = dir_name
            
-            remove_target = os.path.splitext(dir_name)[0]            
+            remove_target = cut_name[-1]            
             if remove_target in name_map:
-                new_name = re.sub(remove_target, name_map[remove_target], dir_name)
+                new_name = re.sub(remove_target, '', dir_name)
             new_name = new_name.lower()
             new_name = re.sub(' ', '_', new_name)
             if new_name != dir_name:
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
-
-
+            if os.path.exists(os.path.join(root, new_name+'.md')):
+                shutil.copyfile(os.path.join(root, new_name+'.md'), os.path.join(root, new_name, 'index.md'))
+    
+    
+    project_name = [f.name for f in Path(content_dir).iterdir() if f.is_file()][0]
+    index_file = os.path.join(content_dir, project_name)
+    os.rename(index_file, os.path.join(content_dir, 'index.md'))
+    
 if __name__ == "__main__":
     deep_clean()
