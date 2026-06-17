@@ -1,6 +1,6 @@
 # Lens’ Chromatic Aberration
 
-![image.png](lens__chromatic_aberration/image.png)
+![image.png](/operational_is_su-fficient/isp_fundamentals/lens__chromatic_aberration/image.png)
 
 | Chromatic Aberration |  |  |
 | --- | --- | --- |

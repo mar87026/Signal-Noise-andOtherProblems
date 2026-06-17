@@ -3,23 +3,23 @@
 *This space is mainly for documenting the bits of knowledge and field experience that are easy to lose over time.
 Keep adding notes whenever new issues show up , which, in troubleshooting work, is basically all the time.*
 
-[Vision Quaulity Standard](operational_is_su-fficient/vision_quaulity_standard/.md)
+[Vision Quaulity Standard](operational_is_su-fficient/vision_quaulity_standard.md)
 
-[ISP Fundamentals](operational_is_su-fficient/isp_fundamentals/.md)
+[ISP Fundamentals](operational_is_su-fficient/isp_fundamentals.md)
 
-[Algorithm Strategies](operational_is_su-fficient/algorithm_strategies/.md)
+[Algorithm Strategies](operational_is_su-fficient/algorithm_strategies.md)
 
-[Tuning & Debugging](operational_is_su-fficient/tuning_&_debugging/.md)
+[Tuning & Debugging](operational_is_su-fficient/tuning_&_debugging.md)
 
-[Power-On to Pipeline](operational_is_su-fficient/power-on_to_pipeline/.md)
+[Power-On to Pipeline](operational_is_su-fficient/power-on_to_pipeline.md)
 
-[Inspiration as Flicker](operational_is_su-fficient/inspiration_as_flicker/.md)
+[Inspiration as Flicker](operational_is_su-fficient/inspiration_as_flicker.md)
 
-[Failure Logs](operational_is_su-fficient/failure_logs/.md)
+[Failure Logs](operational_is_su-fficient/failure_logs.md)
 
-[Something else](operational_is_su-fficient/something_else/.md)
+[Something else](operational_is_su-fficient/something_else.md)
 
-[Gitlab Stuff](operational_is_su-fficient/gitlab_stuff/.md)
+[Gitlab Stuff](operational_is_su-fficient/gitlab_stuff.md)
 
 Contact: [LinkedIn](https://www.linkedin.com/in/susu-li-a6156114b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app), I am happy to say Hi.
 

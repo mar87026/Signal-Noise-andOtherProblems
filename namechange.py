@@ -34,45 +34,6 @@ def deep_clean():
                     continue
                 name_map.append(cut_name[-1])
 
-    #rename content
-    for root, dirs, files in os.walk(content_dir): 
-        for filename in files:
-            if filename.endswith(".md"):
-                file_path = os.path.join(root, filename)
-                with open(file_path, "r", encoding="utf-8") as f:
-                    content = f.read()
-                
-                new_content = content
-
-                for keys in name_map:
-                    if keys in new_content:
-                        new_content = new_content.replace('%20'+keys, '/')
-                
-                def link_update(match):
-                    text_content = match.group(1)
-                    path_content = match.group(2)
-                    root_parts = root.replace("\\", "/").split("/")
-
-                    target_dir = path_content.split("/")[0]
-
-                    if os.path.exists(os.path.join(root.replace("\\", "/"), target_dir)):
-                        idx = root_parts.index('content')
-                        prefix_parts = root_parts[idx+1:]
-
-                        if prefix_parts:
-                            prefix = "/" + "/".join(prefix_parts) + "/"
-                        else:
-                            prefix = "/"
-
-                        return f"[{text_content}]({prefix}{path_content})"
-                    return match.group(0)
-
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_update, new_content)
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)             
-                if new_content != content:
-                    with open(file_path, "w", encoding="utf-8") as f:                
-                        f.write(new_content)
-
     for root, dirs, files in os.walk(content_dir, topdown=False):
    
         for file in files:
@@ -105,7 +66,44 @@ def deep_clean():
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
             if os.path.exists(os.path.join(root, new_name+'.md')):
                 shutil.copyfile(os.path.join(root, new_name+'.md'), os.path.join(root, new_name, 'index.md'))
-    
+        #rename content
+    for root, dirs, files in os.walk(content_dir): 
+        for filename in files:
+            if filename.endswith(".md"):
+                file_path = os.path.join(root, filename)
+                with open(file_path, "r", encoding="utf-8") as f:
+                    content = f.read()
+                
+                new_content = content
+
+                for keys in name_map:
+                    if keys in new_content:
+                        new_content = new_content.replace('%20'+keys, '')
+                
+                def link_update(match):
+                    text_content = match.group(1)
+                    path_content = match.group(2)
+                    root_parts = root.replace("\\", "/").split("/")
+
+                    target_dir = path_content.split("/")[0]
+
+                    if os.path.exists(os.path.join(root.replace("\\", "/"), target_dir)):
+                        idx = root_parts.index('content')
+                        prefix_parts = root_parts[idx+1:]
+
+                        if prefix_parts:
+                            prefix = "/" + "/".join(prefix_parts) + "/"
+                        else:
+                            prefix = "/"
+
+                        return f"[{text_content}]({prefix}{path_content})"
+                    return match.group(0)
+
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_update, new_content)
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)
+                if new_content != content:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        f.write(new_content)
     
     project_name = [f.name for f in Path(content_dir).iterdir() if f.is_file()][0]
     index_file = os.path.join(content_dir, project_name)
