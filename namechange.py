@@ -46,7 +46,7 @@ def deep_clean():
 
                 for keys in name_map:
                     if keys in new_content:
-                        new_content = new_content.replace('%20'+keys, '')
+                        new_content = new_content.replace('%20'+keys, '/')
                 
                 def link_update(match):
                     text_content = match.group(1)
