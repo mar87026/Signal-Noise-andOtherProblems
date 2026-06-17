@@ -5,13 +5,12 @@ from pathlib import Path
 
 current_dir = os.getcwd()
 content_dir = os.path.join(current_dir, "content")
-
+replace_to_baseline = ['%20', '%E2%80%99', ' ', "'"]
 def to_lower_path(match):
     title = match.group(1)  # 抓取 [標題]
     path = match.group(2)  # 抓取 (路徑)
-    path_out = re.sub('%20', '_', path)
-    path_out = re.sub('%E2%80%99', "'", path_out)
-    path_out = re.sub(' ', '_', path_out)
+    pattern = '|'.join(map(re.escape, replace_to_baseline))
+    path_out = re.sub(pattern, '_', path)
     return f"[{title}]({path_out.lower()})"
 # 3. 使用正則表達式物理匹配所有的 [文字](路徑) 格式
 # \[([^\]]+)\]  -> 匹配 [中括號內的任意文字]
@@ -42,7 +41,7 @@ def deep_clean():
                 file_path = os.path.join(root, filename)
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
-
+                
                 new_content = content
 
                 for keys in name_map:
@@ -87,6 +86,7 @@ def deep_clean():
                 new_name = re.sub(' ' + remove_target, '', file)
             new_name = new_name.lower()
             new_name = re.sub(' ', '_', new_name)
+            new_name = re.sub("’", '_', new_name)
             if new_name != file:
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
 
@@ -100,6 +100,7 @@ def deep_clean():
                 new_name = re.sub(remove_target, '', dir_name)
             new_name = new_name.lower()
             new_name = re.sub(' ', '_', new_name)
+            new_name = re.sub("’", '_', new_name)
             if new_name != dir_name:
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
             if os.path.exists(os.path.join(root, new_name+'.md')):

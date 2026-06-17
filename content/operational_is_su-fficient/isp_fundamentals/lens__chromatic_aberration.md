@@ -1,6 +1,6 @@
 # Lens’ Chromatic Aberration
 
-![image.png](lens'_chromatic_aberration/image.png)
+![image.png](lens__chromatic_aberration/image.png)
 
 | Chromatic Aberration |  |  |
 | --- | --- | --- |

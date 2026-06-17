@@ -2,27 +2,27 @@
 
 *Don't wait until you "know everything" to challenge. You will never know everything.*
 
-[Classification-Nearest Neighbors](/operational_is_su-fficient/something_else/classification-nearest_neighbors.md)
+[Classification-Nearest Neighbors](something_else/classification-nearest_neighbors.md)
 
-[Classification-hyperplane](/operational_is_su-fficient/something_else/classification-hyperplane.md)
+[Classification-hyperplane](something_else/classification-hyperplane.md)
 
-[Depthwise Separable Convolution](/operational_is_su-fficient/something_else/depthwise_separable_convolution.md)
+[Depthwise Separable Convolution](something_else/depthwise_separable_convolution.md)
 
-[Linear Classification](/operational_is_su-fficient/something_else/linear_classification.md)
+[Linear Classification](something_else/linear_classification.md)
 
-[Classic Model - YOLOv3](/operational_is_su-fficient/something_else/classic_model_-_yolov3.md)
+[Classic Model - YOLOv3](something_else/classic_model_-_yolov3.md)
 
-[Classic Model - BlazeFace](/operational_is_su-fficient/something_else/classic_model_-_blazeface.md)
+[Classic Model - BlazeFace](something_else/classic_model_-_blazeface.md)
 
-[LOSS](/operational_is_su-fficient/something_else/loss.md)
+[LOSS](something_else/loss.md)
 
-[What’s in report](/operational_is_su-fficient/something_else/what's_in_report.md)
+[What’s in report](something_else/what_s_in_report.md)
 
-[TroubleShooting](/operational_is_su-fficient/something_else/troubleshooting.md)
+[TroubleShooting](something_else/troubleshooting.md)
 
-[Quantization](/operational_is_su-fficient/something_else/quantization.md)
+[Quantization](something_else/quantization.md)
 
-[Besides the Training ](/operational_is_su-fficient/something_else/besides_the_training.md)
+[Besides the Training ](something_else/besides_the_training.md)
 
 | Item |  |
 | --- | --- |

@@ -2,7 +2,7 @@
 
 *Watch your step but don’t glue on it*
 
-![image.png](/operational_is_su-fficient/failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re/image.png)
+![image.png](failure_log_04_resolving_texture_mottling_in_3d_re/image.png)
 
 ## Symptom
 
