@@ -5,12 +5,26 @@ from pathlib import Path
 
 current_dir = os.getcwd()
 content_dir = os.path.join(current_dir, "content")
-replace_to_baseline = ['%20', '%E2%80%99', ' ', "'"]
-def to_lower_path(match):
+replace_to_baseline = ['%20', '%E2%80%99', ' ', "'", "’"]
+
+def normalize_name(name, name_map_list):
+
+    for key in name_map_list:
+        name = name.replace('%20' + key, '').replace(' ' + key, '').replace(key, '')
+
+    pattern = '|'.join(map(re.escape, replace_to_baseline))
+    name = re.sub(pattern, '_', name)
+    
+
+    return name.lower()
+
+
+def to_lower_path(match, name_map):
     title = match.group(1)  # 抓取 [標題]
     path = match.group(2)  # 抓取 (路徑)
-    pattern = '|'.join(map(re.escape, replace_to_baseline))
-    path_out = re.sub(pattern, '_', path)
+    path_parts = path.split('/')
+    cleaned_parts = [normalize_name(p, name_map) for p in path_parts]
+    path_out = '/'.join(cleaned_parts)
     return f"[{title}]({path_out.lower()})"
 # 3. 使用正則表達式物理匹配所有的 [文字](路徑) 格式
 # \[([^\]]+)\]  -> 匹配 [中括號內的任意文字]
@@ -40,33 +54,25 @@ def deep_clean():
             cut_name = os.path.splitext(file)[0].split(' ')
             if len(cut_name) < 2:
                 continue
-            #rename file
-            remove_target = cut_name[-1]
-            new_name = file
-            if remove_target in name_map:
-                new_name = re.sub(' ' + remove_target, '', file)
-            new_name = new_name.lower()
-            new_name = re.sub(' ', '_', new_name)
-            new_name = re.sub("’", '_', new_name)
+
+            new_name = normalize_name(file, name_map)
             if new_name != file:
                 os.rename(os.path.join(root, file), os.path.join(root, new_name))
 
         # rename folder
         for dir_name in dirs:
-            cut_name = dir_name.split(' ')
-            new_name = dir_name
-           
-            remove_target = cut_name[-1]            
-            if remove_target in name_map:
-                new_name = re.sub(remove_target, '', dir_name)
-            new_name = new_name.lower()
-            new_name = re.sub(' ', '_', new_name)
-            new_name = re.sub("’", '_', new_name)
+
+            new_name = normalize_name(dir_name, name_map)
+            
             if new_name != dir_name:
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
+            
             if os.path.exists(os.path.join(root, new_name+'.md')):
-                shutil.copyfile(os.path.join(root, new_name+'.md'), os.path.join(root, new_name, 'index.md'))
-        #rename content
+                shutil.copyfile(
+                os.path.join(root, new_name+'.md'), 
+                os.path.join(root, new_name, 'index.md'))
+    #get new folder name, rename content
+
     for root, dirs, files in os.walk(content_dir): 
         for filename in files:
             if filename.endswith(".md"):
@@ -83,24 +89,27 @@ def deep_clean():
                 def link_update(match):
                     text_content = match.group(1)
                     path_content = match.group(2)
-                    root_parts = root.replace("\\", "/").split("/")
 
                     target_dir = path_content.split("/")[0]
+                    new_name = normalize_name(target_dir, name_map)
+                    if os.path.exists(os.path.join(root, new_name)):
+                        root_parts = root.replace("\\", "/").split("/")
+                        try:
+                            idx = root_parts.index('content')
+                            prefix_parts = root_parts[idx+1:]
+                        except ValueError:
+                            prefix_parts = []
 
-                    if os.path.exists(os.path.join(root.replace("\\", "/"), target_dir)):
-                        idx = root_parts.index('content')
-                        prefix_parts = root_parts[idx+1:]
+                        prefix = "/" + "/".join(prefix_parts) + "/" if prefix_parts else "/"
 
-                        if prefix_parts:
-                            prefix = "/" + "/".join(prefix_parts) + "/"
-                        else:
-                            prefix = "/"
+                        cleaned_path = "/".join([normalize_name(p, name_map) for p in path_content.split("/")])
 
-                        return f"[{text_content}]({prefix}{path_content})"
+                        return f"[{text_content}]({prefix}{cleaned_path})"
                     return match.group(0)
 
                 new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_update, new_content)
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", to_lower_path, new_content)
+                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m :to_lower_path(m , name_map), new_content)
+                
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:
                         f.write(new_content)
