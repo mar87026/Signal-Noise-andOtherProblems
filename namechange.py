@@ -3,8 +3,7 @@ import re
 import shutil
 from pathlib import Path
 
-current_dir = os.getcwd()
-content_dir = os.path.join(current_dir, "content")
+
 replace_to_baseline = ['%20', '%E2%80%99', ' ', "'", "’"]
 
 def normalize_name(name, name_map_list):
@@ -31,6 +30,8 @@ def to_lower_path(match, name_map):
 # \(([^)]+)\)    -> 匹配 (小括號內的路徑)
 
 def deep_clean():
+    current_dir = os.getcwd()
+    content_dir = os.path.join(current_dir, "content")
     if not os.path.exists(content_dir):
         print(content_dir)
         return
@@ -48,8 +49,8 @@ def deep_clean():
                     continue
                 name_map.append(cut_name[-1])
 
+    #get new folder name, rename content
     for root, dirs, files in os.walk(content_dir, topdown=False):
-   
         for file in files:
             cut_name = os.path.splitext(file)[0].split(' ')
             if len(cut_name) < 2:
@@ -66,14 +67,11 @@ def deep_clean():
             
             if new_name != dir_name:
                 os.rename(os.path.join(root, dir_name), os.path.join(root, new_name))
-            
-            if os.path.exists(os.path.join(root, new_name+'.md')):
-                shutil.copyfile(
-                os.path.join(root, new_name+'.md'), 
-                os.path.join(root, new_name, 'index.md'))
-    #get new folder name, rename content
+    
+    current_dir = os.getcwd()
+    content_dir = os.path.join(current_dir, "content")            
 
-    for root, dirs, files in os.walk(content_dir): 
+    for root, dirs, files in os.walk(content_dir, topdown=False): 
         for filename in files:
             if filename.endswith(".md"):
                 file_path = os.path.join(root, filename)
@@ -91,6 +89,7 @@ def deep_clean():
                     path_content = match.group(2)
 
                     target_dir = path_content.split("/")[0]
+                    
                     new_name = normalize_name(target_dir, name_map)
                     if os.path.exists(os.path.join(root, new_name)):
                         root_parts = root.replace("\\", "/").split("/")
@@ -113,10 +112,16 @@ def deep_clean():
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:
                         f.write(new_content)
+                
+                if Path(os.path.splitext(file_path)[0]).is_dir():
+                    shutil.copyfile(
+                    file_path, 
+                    os.path.join(os.path.splitext(file_path)[0], 'index.md'))
+    
+      
     
     project_name = [f.name for f in Path(content_dir).iterdir() if f.is_file()][0]
     index_file = os.path.join(content_dir, project_name)
     os.rename(index_file, os.path.join(content_dir, 'index.md'))
-    
 if __name__ == "__main__":
     deep_clean()
