@@ -2,6 +2,8 @@
 
 *The crash diary, I mean my self.*
 
+[Failure Log 00 | Architectural Overreach: From Non-Linear WDR-LTM to Grid-Based Linear Pipeline](/operational_is_su-fficient/failure_logs/failure_log_00_architectural_overreach_from_non-li.md)
+
 [Failure Log 01 | Debugging ISP Video Stream Corruption: Hardware Failure vs. Auto Exposure (AE) Loop Runaway](/operational_is_su-fficient/failure_logs/failure_log_01_debugging_isp_video_stream_corrupti.md)
 
 [**Failure Log 02 | Troubleshooting Red Noise in ISP Tuning: Sensor QE, Crosstalk, and Chromatic Aberration Correction**](/operational_is_su-fficient/failure_logs/failure_log_02_troubleshooting_red_noise_in_isp_tu.md)

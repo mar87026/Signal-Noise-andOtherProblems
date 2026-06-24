@@ -21,6 +21,12 @@ Keep adding notes whenever new issues show up , which, in troubleshooting work, 
 
 [Gitlab Stuff](/operational_is_su-fficient/gitlab_stuff.md)
 
+8+ years Image Processing Engineer
+
+ISP / Camera IQ / Panorama / Quantization / Embedded Vision
+
+Algorithm Engineer — below us are drivers, DSP, lava, and eventually hell.
+
 Contact: [LinkedIn](https://www.linkedin.com/in/susu-li-a6156114b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app), I am happy to say Hi.
 
 Storage: [Gitlab](https://gitlab.com/mar87026/videotool), but staff is not ready
