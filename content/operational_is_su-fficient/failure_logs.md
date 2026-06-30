@@ -8,6 +8,10 @@
 
 [**Failure Log 02 | Troubleshooting Red Noise in ISP Tuning: Sensor QE, Crosstalk, and Chromatic Aberration Correction**](/operational_is_su-fficient/failure_logs/failure_log_02_troubleshooting_red_noise_in_isp_tu.md)
 
-[Failure Log 03 | Resolving IC Register Address Decoding Errors via Real-Time Readback](/operational_is_su-fficient/failure_logs/failure_log_03_resolving_ic_register_address_decod.md)
+[Failure Log 03 | IC Register Address Decoding Errors via Real-Time Readback](/operational_is_su-fficient/failure_logs/failure_log_03_ic_register_address_decoding_errors.md)
 
 [Failure Log 04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration](/operational_is_su-fficient/failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re.md)
+
+[Failure Log 05 | Above Panorama Redefining the Problem Before Build the Pipeline](/operational_is_su-fficient/failure_logs/failure_log_05_above_panorama_redefining_the_probl.md)
+
+[Failure Log 06 | AWB with Dual-Cameras](/operational_is_su-fficient/failure_logs/failure_log_06_awb_with_dual-cameras.md)

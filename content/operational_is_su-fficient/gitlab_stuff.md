@@ -1,8 +1,8 @@
 # Gitlab Stuff
 
 - [x]  Load File with unique_ptr and align to keep the memory leak
-- [ ]  Load one, process one.
-- [ ]  2D wavelet
+- [x]  Load one, process one.
+- [ ]  2D wavelet 5/3
 - [ ]  Lanzcos up
 
 ### Run:
