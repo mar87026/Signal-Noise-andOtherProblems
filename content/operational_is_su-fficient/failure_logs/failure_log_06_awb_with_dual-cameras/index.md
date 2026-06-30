@@ -26,3 +26,7 @@ However, problems occurred during rapid scene changes, and also, the color perfo
 Also a stability region around the Planckian locus so that minor fluctuations would not trigger unnecessary white balance adjustments. This improves temporal stability while avoiding excessive oscillation.
 
 The key idea is that white balance should not react immediately to every measurement. Every ISP Module which control whole frame coefficients doens’t. Instead, updates should be driven by confidence. Cross-sensor validation is only activated when a significant change is detected, minimizing computational overhead while substantially improving robustness during challenging scene transitions.
+
+#### Extension:
+
+[When HDR breaks White Balance](/operational_is_su-fficient/failure_logs/../algorithm_strategies/when_hdr_breaks_white_balance.md)

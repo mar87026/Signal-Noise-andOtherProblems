@@ -21,7 +21,7 @@ Keep adding notes whenever new issues show up , which, in troubleshooting work, 
 
 [Gitlab Stuff](/operational_is_su-fficient/gitlab_stuff.md)
 
-8+ years Image Processing Engineer
+9+ years Image Processing Engineer
 
 ISP / Camera IQ / Panorama / Quantization / Embedded Vision
 

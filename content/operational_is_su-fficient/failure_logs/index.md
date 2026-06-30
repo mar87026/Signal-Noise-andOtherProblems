@@ -12,6 +12,4 @@
 
 [Failure Log 04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration](/operational_is_su-fficient/failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re.md)
 
-[Failure Log 05 | Above Panorama Redefining the Problem Before Build the Pipeline](/operational_is_su-fficient/failure_logs/failure_log_05_above_panorama_redefining_the_probl.md)
-
 [Failure Log 06 | AWB with Dual-Cameras](/operational_is_su-fficient/failure_logs/failure_log_06_awb_with_dual-cameras.md)
