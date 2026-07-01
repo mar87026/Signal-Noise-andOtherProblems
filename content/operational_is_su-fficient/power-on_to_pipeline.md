@@ -2,11 +2,11 @@
 
 *Once upon a time, a register was written, and the pixels began to flow.*
 
-![image.png](/operational_is_su-fficient/power-on_to_pipeline/image.png)
-
 ## Power on
 
 This step is focusing on the wake the sensors up, and sync all of them. Especially while there are multiple streams in.
+
+![image.png](/operational_is_su-fficient/power-on_to_pipeline/image.png)
 
 ### Transmission Detail:
 
@@ -14,7 +14,12 @@ This step is focusing on the wake the sensors up, and sync all of them. Especial
 
 ## Streaming In
 
-DMA and Buffer
+Just booted up sensor
+
+## Buffer Distribution
+
+## Module On
+
 Extend:
 
-[Fast Root Cause Isolation for Image Quality Issues](/operational_is_su-fficient/tuning_&_debugging/fast_root_cause_isolation_for_image_quality_issues.md)
+[Fast Root Cause Isolation for Image Quality Issues](/operational_is_su-fficient/picture_quality_engineering/fast_root_cause_isolation_for_image_quality_issues.md)

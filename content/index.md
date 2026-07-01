@@ -9,7 +9,7 @@ Keep adding notes whenever new issues show up , which, in troubleshooting work, 
 
 [Algorithm Strategies](/operational_is_su-fficient/algorithm_strategies.md)
 
-[Tuning & Debugging](/operational_is_su-fficient/tuning_&_debugging.md)
+[Picture Quality Engineering](/operational_is_su-fficient/picture_quality_engineering.md)
 
 [Power-On to Pipeline](/operational_is_su-fficient/power-on_to_pipeline.md)
 
