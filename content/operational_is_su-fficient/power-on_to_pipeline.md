@@ -14,4 +14,7 @@ This step is focusing on the wake the sensors up, and sync all of them. Especial
 
 ## Streaming In
 
+DMA and Buffer
+Extend:
+
 [Fast Root Cause Isolation for Image Quality Issues](/operational_is_su-fficient/tuning_&_debugging/fast_root_cause_isolation_for_image_quality_issues.md)

@@ -1,6 +1,7 @@
 # ISP Fundamentals
 
-*ISP Tuning and Algorithm Design Are Two Different Disciplines*
+*Detail in Signal Module
+ISP Tuning and Algorithm Design Are Two Different Disciplines*
 
 [Sensor’s Noise Behavior](/operational_is_su-fficient/isp_fundamentals/sensor_s_noise_behavior.md)
 

@@ -1,6 +1,7 @@
 # Tuning & Debugging
 
-*Rememeber: Algorithm and Tuning are different.*
+*Tuning pipeline
+Rememeber: Algorithm and Tuning are different.*
 
 [Color](/operational_is_su-fficient/tuning_&_debugging/color.md)
 

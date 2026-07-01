@@ -15,7 +15,7 @@ To mitigate this, standard practice applies a preliminary White Balance (Pre-WB)
 1. The blending module correctly propagates the applied gain values down the pipeline.
 2. The blending logic operates strictly within the **linear domain**.
 
-If the signal passes through **non-linear modules**—such as Local Tone Mapping (LTM) or adaptive histogram equalization (like CLAHE)—the data is mapped onto a curve, effectively moving into a gamma-compressed space. Attempting to calculate or correct linear WB gains on non-linear data is not only mathematically flawed, but also computationally expensive and overwhelmingly complex to reconstruct.
+If the signal passes through **non-linear modules**—such as Local Tone Mapping (LTM) or adaptive histogram equalization (like CLAHE)—the original linear relationship between RGB values no longer exists. Reconstructing a physically meaningful white balance estimate requires either explicit inverse mapping or auxiliary metadata from upstream modules, both of which significantly increase implementation complexity. Besides, it’s also computationally expensive and overwhelmingly complex to reconstruct.
 
 Extend:
 

@@ -1,6 +1,7 @@
 # Something else
 
-*Don't wait until you "know everything" to challenge. You will never know everything.*
+*“Artificial Intelligence”
+Don't wait until you "know everything" to challenge. You will never know everything.*
 
 [Classification-Nearest Neighbors](/operational_is_su-fficient/something_else/classification-nearest_neighbors.md)
 

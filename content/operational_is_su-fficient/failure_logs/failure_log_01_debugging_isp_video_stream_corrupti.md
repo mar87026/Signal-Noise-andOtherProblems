@@ -14,4 +14,4 @@ The issue was initially masked by the system’s adaptive behavior; the AE algor
 
 - **Logic Inconsistency Check:** Implemented a cross-domain validation layer in the post-ISP pipeline. The system now validates the correlation between environmental indicators (e.g., Dark Channel Prior) and color correction results (AWB). If a low-light state is detected alongside high-saturation color gains, the system triggers an anomaly flag to halt the gain-loop.
 - **Temporal Stability Guard:** Added a change-rate threshold for gain adjustments. Any sudden, physically impossible convergence shifts are now flagged as signal-integrity failures, protecting the downstream pipeline from runaway gain accumulation.
-- **Zero-Trust Input Policy:** Shifted toward a "Zero-Trust" architecture where ISP statistics are no longer accepted as valid if they violate fundamental physical consistency, regardless of the sensor's reported status.
+- **Signal Integrity Validation:** Shifted toward a "Zero-Trust" architecture where ISP statistics are discorded whenever they violate physically  plausible scene behavior, regardless of upstream module status.
