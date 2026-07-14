@@ -13,7 +13,6 @@ pacman -S mingw-w64-x86_64-toolchain
 pacman -S mingw-w64-x86_64-cmake
 pacman -S mingw-w64-x86_64-ninja
 pacman -S mingw-w64-x86_64-ntldd
-
 ```
 
 > 'cmake' is not recognized as an internal or external command,
@@ -39,11 +38,13 @@ project(VideoTool CXX)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
+add_subdirectory(json)
+
 find_package(OpenCV REQUIRED)
 
-add_executable(${PROJECT_NAME} main.cpp)
+add_executable(${PROJECT_NAME} main.cpp ultis/File_process.cpp ultis/SR_process.cpp)
 
-target_link_libraries(${PROJECT_NAME} PRIVATE opencv_core opencv_imgproc)
+target_link_libraries(${PROJECT_NAME} PRIVATE opencv_core opencv_imgproc nlohmann_json::nlohmann_json)
 
 if(MINGW)
     target_link_options(VideoTool PRIVATE -static-libgcc -static-libstdc++ -static)

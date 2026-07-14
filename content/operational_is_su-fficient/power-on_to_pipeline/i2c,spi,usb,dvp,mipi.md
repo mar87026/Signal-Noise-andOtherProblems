@@ -2,6 +2,10 @@
 
 *First step to debug*
 
+640*480 30FPS 8bits: 73,728,000 approximately equal to 74M
+
+1080p 30FPS 12bits: 746,496,000 approximately equal to 750M bps
+
 | Abbreviation | Full Name | Lines number | Advantage | Defect | Speed Limit |
 | --- | --- | --- | --- | --- | --- |
 | I2C | Inter-Integrated Circuit | 2
@@ -16,7 +20,7 @@ Master Out Slave In
 Master In Slave out
 Chip Select | read and write in same time. | Add any item, add one CS line for transmission | usually 50M |
 | transmit OSD inform which shown on screen and return IMU inform |  |  |  |  | p |
-| USB(2.0) | **U**niversal **S**erial **B**us | 4
+| USB | **U**niversal **S**erial **B**us | 4
 power
 D+
 D-
@@ -25,8 +29,10 @@ Hot-Plugging
 Plug and Play
 Power Delivery | Protocol Overhead
 Master CPU cost
-short transmission distance | 480M in theory
-320M in practice |
+short transmission distance |  |
+| USB(2.0) | 480M in theory
+320M in practice |  |  |  |  |
+| USB(3.0) |  |  |  |  |  |
 | Transmitted the IR inform |  |  |  |  |  |
 | DVP(parallel) | Digital Video Port | 8-12
 HSYNC and VSYNC | Easy to follow | Low

@@ -75,7 +75,7 @@ d is the distance between an object in the image and the observer.
 > [Visibility in bad weather from a single image | IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/document/4587643)
 > 
 
-Now, we have the conditions:
+#### Now, we have the conditions:
 
 1. In the nature image, one of every RGB values is closed to zero.
 2. While cameras capture an object, the image signal is both composed by object direct attenuation and scattered light from everywhere(airlight).
@@ -131,20 +131,8 @@ $$
 \tilde{t}(x)=\tilde{e}^{-\beta d(x)}=1-\underset{y\in\Omega(x)}{min}(\underset{c}{min}{\frac{I^c(y)}{A^c}})
 $$
 
-I know, I know it’s really a long story. next page we talk about Estimate the A 
+Apply tranmission t(x) into 
 
-## cheat sheet
+[Defog - Dark_Channel_Prior_1 : Thought and Reality](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_1_thought_and_reality.md)
 
-| symbol |  |
-| --- | --- |
-| **x** | 2D spatial location |
-| **I(x)** | observed intensity / hazy image / received image |
-| **J(x)** | scene radiance / haze-free image / clear image |
-| **A** | global atmospheric light / $L_{\\infty}$ |
-| **t(x)** | transmission / $e^{-\\beta d(x)}$ |
-| $A(1-t(x))$ | **airlight / environment interference / noise** |
-| **J(x)t(x)** | direct attenuation /distortion object |
-| **d(x)** | scene depth / distance |
-| **β** | attenuation coefficient |
-| **ρ(x)** | reflectance / albedo（反射率） |
-| **c ∈ {r,g,b}** | color channel |
+[Defog - ](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/defog_-.md)
