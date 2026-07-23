@@ -1,9 +1,15 @@
 # Gitlab Stuff
 
+*Some dev notes here for when my mind goes blank.*
+
 - [x]  Load File with unique_ptr and align to keep the memory leak
 - [x]  Load one, process one.
 - [ ]  2D wavelet 5/3
 - [ ]  Lanzcos up
+
+## Extend:
+
+[Wavelet, DCT](/operational_is_su-fficient/gitlab_stuff/wavelet,_dct.md)
 
 ### Run:
 

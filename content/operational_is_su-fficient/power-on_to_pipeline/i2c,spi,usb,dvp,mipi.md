@@ -2,7 +2,8 @@
 
 *First step to debug*
 
-640*480 30FPS 8bits: 73,728,000 approximately equal to 74M
+Note:
+640*480 30FPS 8bits: 73,728,000 approximately equal to 74M bps
 
 1080p 30FPS 12bits: 746,496,000 approximately equal to 750M bps
 
