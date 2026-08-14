@@ -11,10 +11,10 @@ framerate不受影響 |
 
 | anti-led flicker |  |
 | --- | --- |
-| 感測器偵測LED存在 | SPD Split-Pixel Design: 
+| 感測器偵測LED存在 | SPD Split-Pixel Design or LOFIC:
 依照rolling shutter的運作: 逐行曝光，此時感測器可以捕捉到LED變化造成的條紋變化。
 也可以不同區域做不同時間點的曝光
-不管哪種做法，SPD是個將一個pixel拆為兩個做事的技術，通常一個專心做L/HCG，一個配合需求做處理，因此可以對閃爍的LED做出對應，但這有點貴，現在大部分都做RCCC全光擷取 |
+不管哪種做法，SPD是個將一個pixel拆為兩個做事的技術，通常一個專心做L/HCG，一個配合需求做處理，因此可以對閃爍的LED做出對應。 |
 | 算法偵測LED存在 | 對畫面做FFT，LED燈會有固定頻率變化
 或是亮度的變化也會讓頻譜出現不同反應 |
 

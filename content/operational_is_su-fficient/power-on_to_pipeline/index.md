@@ -12,7 +12,7 @@ This step is focusing on the wake the sensors up, and sync all of them. Especial
 | --- | --- | --- |
 | GPIO | General-purpose input/output | The root, not a special action, merely an item/technology that tranmit the signal between device. |
 | OSC | Oscillator | Control the working cycle time Be the synchronization basic here. |
-| AVDD/DVDD | Analog/Digital Device |  |
+| AVDD/DVDD | Analog/Digital Device | provid power to the analog/digic circuits in the sensor. |
 
 ### Transmission Detail:
 
@@ -25,10 +25,6 @@ After booted up sensor with synchronization, it start to collect the light energ
  
 
 ![image.png](/operational_is_su-fficient/power-on_to_pipeline/image_1.png)
-
-| DMA | Direct Memory Access |
-| --- | --- |
-| Memory Control |  |
 
 ### Memory Detail
 

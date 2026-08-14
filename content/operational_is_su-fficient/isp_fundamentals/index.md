@@ -9,6 +9,6 @@ ISP Tuning and Algorithm Design Are Two Different Disciplines*
 
 [What’s Dynamic Range](/operational_is_su-fficient/isp_fundamentals/what_s_dynamic_range.md)
 
-[Defog - Dark_Channel_Prior_2:Basic model and Cover by Object Distance](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover.md)
-
 [Defog - Dark_Channel_Prior_1 : Thought and Reality](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_1_thought_and_reality.md)
+
+[Defog - Dark_Channel_Prior_2:Basic model and Cover by Object Distance](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover.md)
