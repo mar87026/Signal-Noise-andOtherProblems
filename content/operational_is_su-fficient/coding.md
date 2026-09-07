@@ -176,11 +176,7 @@ extend:
 
 [C & C++](/operational_is_su-fficient/coding/c_&_c++.md)
 
-[self-intro](/operational_is_su-fficient/coding/self-intro.md)
-
 [Linked List](/operational_is_su-fficient/coding/linked_list.md)
-
-[applied reason](/operational_is_su-fficient/coding/applied_reason.md)
 
 [Segmentation fault/Memory Issue](/operational_is_su-fficient/coding/segmentation_fault_memory_issue.md)
 

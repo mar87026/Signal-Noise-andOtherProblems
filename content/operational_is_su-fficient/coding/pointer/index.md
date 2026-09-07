@@ -51,6 +51,8 @@ extend:
 
 你要保護的是 caller的值 不被改動，還是 pointer物件 的值 ?
 
+### 賦予不受更動的特性
+
 ### Const
 
 | status |  |  | 改動的是誰 |
