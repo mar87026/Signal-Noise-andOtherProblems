@@ -3,11 +3,13 @@
 *This space is mainly for documenting the bits of knowledge and field experience that are easy to lose over time.
 Keep adding notes whenever new issues show up , which, in troubleshooting work, is basically all the time.*
 
-[Vision Quaulity Standard](/operational_is_su-fficient/vision_quaulity_standard.md)
+[Vision Quality Standard](/operational_is_su-fficient/vision_quality_standard.md)
 
 [ISP Fundamentals](/operational_is_su-fficient/isp_fundamentals.md)
 
 [Algorithm Strategies](/operational_is_su-fficient/algorithm_strategies.md)
+
+[Hardward Cost](/operational_is_su-fficient/hardward_cost.md)
 
 [Picture Quality Engineering](/operational_is_su-fficient/picture_quality_engineering.md)
 
@@ -18,6 +20,8 @@ Keep adding notes whenever new issues show up , which, in troubleshooting work, 
 [Failure Logs](/operational_is_su-fficient/failure_logs.md)
 
 [Something else](/operational_is_su-fficient/something_else.md)
+
+[Coding](/operational_is_su-fficient/coding.md)
 
 [Gitlab Stuff](/operational_is_su-fficient/gitlab_stuff.md)
 

@@ -1,4 +1,4 @@
-# Color
+# Demosaic and Artifact
 
 | CFA會造成的問題 |  |
 | --- | --- |

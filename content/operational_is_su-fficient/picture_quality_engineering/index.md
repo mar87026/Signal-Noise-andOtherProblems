@@ -3,7 +3,7 @@
 *Tuning pipeline
 Rememeber: Algorithm and Tuning are different.*
 
-[Color](/operational_is_su-fficient/picture_quality_engineering/color.md)
+[Demosaic and Artifact](/operational_is_su-fficient/picture_quality_engineering/demosaic_and_artifact.md)
 
 [Edge Enhancement](/operational_is_su-fficient/picture_quality_engineering/edge_enhancement.md)
 
