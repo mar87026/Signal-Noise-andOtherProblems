@@ -43,7 +43,44 @@ swap實際上就是交換兩個pointer物件的值，也就是caller的位置副
 
 目標是在swap裡，*a得到的是原本*b的值；*b則是*a原本的值；但你不可能交換兩個物件的”address”，你只能改變它的pointer
 
+```cpp
+void make_NULL(int* p) {
+    p = NULL; //p的值變null，caller的位址和值不變，但後續這個scope無法在正確從input拿取正確值了
+}
+void make_NULL(int* p) {
+    *p = NULL//caller's value; caller的值改變
+}
+```
+
+又如果，caller本身就是pointer呢? 其實和前面傳送addess一樣，但它能在scope改
+
+```c
+  SinglyLinkedListNode {
+     int data;
+     SinglyLinkedListNode* next;
+  };
+  SinglyLinkedListNode* deleteNode(SinglyLinkedListNode* llist, int position) {
+     if (llist == NULL) return NULL;
+     if (position == 0) return llist->next;
+     int count = 1;
+     SinglyLinkedListNode* result = llist;
+     
+     while(result != NULL) {
+        if (count == position) {
+            result->next = result->next->next;
+            break;
+        }
+        result = result->next;
+        count++;
+     }
+     
+     return llist;
+  }
+```
+
 extend: 
+
+[Linked List](/operational_is_su-fficient/coding/pointer/linked_list.md)
 
 [Swap: switch the ownership](/operational_is_su-fficient/coding/pointer/swap_switch_the_ownership.md)
 
@@ -61,9 +98,3 @@ extend:
 | int const **b ⇒ (int const)**b |  |  | pointer物件的值 |
 | int *const b | b是個const pointer指向int | b不能修改但*b = 20可以 | caller的值 |
 | const *int b | b是個int pointer ，並為不可動的常數 | b不可以修改，但*b = 15 可以 | caller的值 |
-
-```cpp
-void make_NULL(int* p) {
-    p = NULL; //p的值變null，caller的值不變，但後續這個scope無法在正確從input拿取正確值了
-}
-```

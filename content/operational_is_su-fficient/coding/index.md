@@ -95,7 +95,7 @@ int* a = FOO();
 delete[] a;//IMPORTANT!!!
 ```
 
-[Prefix : LifeCycle](/operational_is_su-fficient/coding/prefix_lifecycle.md)
+[Alias : LifeCycle](/operational_is_su-fficient/coding/alias_lifecycle.md)
 
 # RESOURCE
 
@@ -168,15 +168,17 @@ C是成果，但千萬別和A混在一起放。
 
 因此3狀態可以各預備兩個buffer: 手上拿一個處理，桌上放一個待命；絕不直接將手上的交給下一個狀態，DMA負責將桌上不同狀態own 的buffer交換，processor只在完成動作後，會將手上的籃子和桌上的交換。因此我們需要一種type強調resource owner唯一性或是分享性。以及定義交換前後buffer的狀態。
 
-extend: 
+#### extend:
 
 [Swap: switch the ownership](/operational_is_su-fficient/coding/pointer/swap_switch_the_ownership.md)
 
 [C++ Resource Control Type](/operational_is_su-fficient/coding/c++_resource_control_type.md)
 
-[C & C++](/operational_is_su-fficient/coding/c_&_c++.md)
+[C Type : Group](/operational_is_su-fficient/coding/c_type_group.md)
 
-[Linked List](/operational_is_su-fficient/coding/linked_list.md)
+[Unlying Logic : Alignment](/operational_is_su-fficient/coding/unlying_logic_alignment.md)
+
+[C & C++](/operational_is_su-fficient/coding/c_&_c++.md)
 
 [Segmentation fault/Memory Issue](/operational_is_su-fficient/coding/segmentation_fault_memory_issue.md)
 
