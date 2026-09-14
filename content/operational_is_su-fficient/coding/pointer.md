@@ -80,9 +80,9 @@ void make_NULL(int* p) {
 
 extend: 
 
-[Linked List](/operational_is_su-fficient/coding//operational_is_su-fficient/coding/pointer/linked_list.md)
+[Linked List](/operational_is_su-fficient/coding/pointer/linked_list.md)
 
-[Resource Control: Lock](/operational_is_su-fficient/coding//operational_is_su-fficient/coding/pointer/resource_control_lock.md)
+[Resource Control: Lock](/operational_is_su-fficient/coding/pointer/resource_control_lock.md)
 
 那代表其實b可以轉指向其他物件的address，我要怎麼確保指向固定呢?
 

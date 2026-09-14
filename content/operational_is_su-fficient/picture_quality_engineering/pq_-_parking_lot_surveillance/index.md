@@ -6,7 +6,7 @@
 
 The camera was installed at the entrance of an airport parking lot, facing strong backlight during the daytime. Vehicles slowed down approximately four meters in front of the camera for license plate recognition before turning into the parking area.
 
-![image.png](/operational_is_su-fficient/picture_quality_engineering//operational_is_su-fficient/picture_quality_engineering/pq_-_parking_lot_surveillance/image.png)
+![image.png](/operational_is_su-fficient/picture_quality_engineering/pq_-_parking_lot_surveillance/image.png)
 
 Due to security requirements, both the automatic license plate recognition(LPR system) and security personnel had to identify the license plate and vehicle type during this short turning interval.
 

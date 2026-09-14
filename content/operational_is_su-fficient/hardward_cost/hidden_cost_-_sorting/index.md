@@ -4,7 +4,7 @@
 
 Make a statistic within 16*16 grids whose overlapped an image. then you will get a histogram
 
-![image.png](/operational_is_su-fficient/hardward_cost//operational_is_su-fficient/hardward_cost/hidden_cost_-_sorting/image.png)
+![image.png](/operational_is_su-fficient/hardward_cost/hidden_cost_-_sorting/image.png)
 
 If I tend to get max and minimum ones
 

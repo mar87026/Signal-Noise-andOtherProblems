@@ -8,7 +8,7 @@
 
 # Wavelet:
 
-![line_based_2d_dwt53_architecture.png](/operational_is_su-fficient/gitlab_stuff//operational_is_su-fficient/gitlab_stuff/wavelet,_dct/line_based_2d_dwt53_architecture.png)
+![line_based_2d_dwt53_architecture.png](/operational_is_su-fficient/gitlab_stuff/wavelet,_dct/line_based_2d_dwt53_architecture.png)
 
 1. Lifting Scheme: Reported by Wim Sweldens : “The Lifting Scheme: A Construction of Second Generation Wavelets”, All Discrete Wavlet Transforms are made of :
     1. Split → into even ones and odd ones

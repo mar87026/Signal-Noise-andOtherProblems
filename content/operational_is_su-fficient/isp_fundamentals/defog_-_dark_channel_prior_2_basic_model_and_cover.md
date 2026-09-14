@@ -20,7 +20,7 @@ From the above equation, we got the colinear system in RGB scalar like:
 
 ---
 
-![image.png](/operational_is_su-fficient/isp_fundamentals//operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/image.png)
+![image.png](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/image.png)
 
 (it’called Markov Random Field, often used in ISP filed to show random distribution of color system)
 
@@ -55,7 +55,7 @@ For an N-pixel color image I, there are 3N constraints and 4N+3 unknowns.
 
 [But what’s x ①? Is it the distance to object or the 2D location?  Is A an amplitude **②**?] Let split the formula in detail.
 
-![image.png](/operational_is_su-fficient/isp_fundamentals//operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/image_1.png)
+![image.png](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/image_1.png)
 
 The optical model of the bad weather derived into two terns:
 
@@ -133,6 +133,6 @@ $$
 
 Apply tranmission t(x) into 
 
-[Defog - Dark_Channel_Prior_1 : Thought and Reality](/operational_is_su-fficient/isp_fundamentals//operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_1_thought_and_reality.md)
+[Defog - Dark_Channel_Prior_1 : Thought and Reality](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_1_thought_and_reality.md)
 
-[Defog - ](/operational_is_su-fficient/isp_fundamentals//operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/defog_-.md)
+[Defog - ](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover/defog_-.md)

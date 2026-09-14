@@ -20,7 +20,7 @@
 
 那麼，要怎麼確保這個記憶體的值是我們想要的呢? 不是 **`volatile`** 
 
-[Resource Control : Mutex/atomic](/operational_is_su-fficient/coding//operational_is_su-fficient/coding/compiler_logic/resource_control_mutex_atomic.md)
+[Resource Control : Mutex/atomic](/operational_is_su-fficient/coding/compiler_logic/resource_control_mutex_atomic.md)
 
 | Heap | Stack |
 | --- | --- |

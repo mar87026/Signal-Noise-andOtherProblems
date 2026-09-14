@@ -2,13 +2,13 @@
 
 *“Just show me the room ASAP” from CEO*
 
-![image.png](/operational_is_su-fficient/algorithm_strategies//operational_is_su-fficient/algorithm_strategies/above_panorama_redefining_the_problem_before_build/image.png)
+![image.png](/operational_is_su-fficient/algorithm_strategies/above_panorama_redefining_the_problem_before_build/image.png)
 
 ## Original Assumption
 
 I was the one of team who were making 
 
-[Failure Log 04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration](/operational_is_su-fficient/algorithm_strategies//operational_is_su-fficient/algorithm_strategies/../failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re.md)
+[Failure Log 04 | Resolving Texture Mottling in 3D Reconstruction: A Logic-Driven Approach Over Hardware Calibration](/operational_is_su-fficient/algorithm_strategies/../failure_logs/failure_log_04_resolving_texture_mottling_in_3d_re.md)
 
 Initially, **I thought this was another 3D reconstruction problem**, perhaps it just needed optimization.
 
@@ -151,6 +151,6 @@ It is how many incorrect assumptions had to be discarded along the way.
 
 And how to make the ceiling and floor normal? Inpainting?
 
-![image.png](/operational_is_su-fficient/algorithm_strategies//operational_is_su-fficient/algorithm_strategies/above_panorama_redefining_the_problem_before_build/image_1.png)
+![image.png](/operational_is_su-fficient/algorithm_strategies/above_panorama_redefining_the_problem_before_build/image_1.png)
 
-![image.png](/operational_is_su-fficient/algorithm_strategies//operational_is_su-fficient/algorithm_strategies/above_panorama_redefining_the_problem_before_build/image_2.png)
+![image.png](/operational_is_su-fficient/algorithm_strategies/above_panorama_redefining_the_problem_before_build/image_2.png)

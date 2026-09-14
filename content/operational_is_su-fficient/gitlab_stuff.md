@@ -10,15 +10,15 @@
 
 ## Extend:
 
-[Wavelet, DCT](/operational_is_su-fficient//operational_is_su-fficient/gitlab_stuff/wavelet,_dct.md)
+[Wavelet, DCT](/operational_is_su-fficient/gitlab_stuff/wavelet,_dct.md)
 
 ### Run:
 
-[MSYS2MINGW64 and CMakeList](/operational_is_su-fficient//operational_is_su-fficient/gitlab_stuff/msys2mingw64_and_cmakelist.md)
+[MSYS2MINGW64 and CMakeList](/operational_is_su-fficient/gitlab_stuff/msys2mingw64_and_cmakelist.md)
 
-[Failure_Logs_Qaurtz](/operational_is_su-fficient//operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz.md)
+[Failure_Logs_Qaurtz](/operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz.md)
 
-[Besides the Training ](/operational_is_su-fficient//operational_is_su-fficient/something_else/besides_the_training.md)
+[Besides the Training ](/operational_is_su-fficient/something_else/besides_the_training.md)
 
 ```jsx
 ffplay -f rawvideo -pixel_format yuv420p -video_size 1920x1080 -framerate 30 -i input.yuv

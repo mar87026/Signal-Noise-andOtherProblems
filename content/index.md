@@ -3,27 +3,27 @@
 *This space is mainly for documenting the bits of knowledge and field experience that are easy to lose over time.
 Keep adding notes whenever new issues show up , which, in troubleshooting work, is basically all the time.*
 
-[Vision Quality Standard](//operational_is_su-fficient/vision_quality_standard.md)
+[Vision Quality Standard](/operational_is_su-fficient/vision_quality_standard.md)
 
-[ISP Fundamentals](//operational_is_su-fficient/isp_fundamentals.md)
+[ISP Fundamentals](/operational_is_su-fficient/isp_fundamentals.md)
 
-[Algorithm Strategies](//operational_is_su-fficient/algorithm_strategies.md)
+[Algorithm Strategies](/operational_is_su-fficient/algorithm_strategies.md)
 
-[Hardward Cost](//operational_is_su-fficient/hardward_cost.md)
+[Hardward Cost](/operational_is_su-fficient/hardward_cost.md)
 
-[Picture Quality Engineering](//operational_is_su-fficient/picture_quality_engineering.md)
+[Picture Quality Engineering](/operational_is_su-fficient/picture_quality_engineering.md)
 
-[Power-On to Pipeline](//operational_is_su-fficient/power-on_to_pipeline.md)
+[Power-On to Pipeline](/operational_is_su-fficient/power-on_to_pipeline.md)
 
-[Inspiration as Flicker](//operational_is_su-fficient/inspiration_as_flicker.md)
+[Inspiration as Flicker](/operational_is_su-fficient/inspiration_as_flicker.md)
 
-[Failure Logs](//operational_is_su-fficient/failure_logs.md)
+[Failure Logs](/operational_is_su-fficient/failure_logs.md)
 
-[Something else](//operational_is_su-fficient/something_else.md)
+[Something else](/operational_is_su-fficient/something_else.md)
 
-[Coding](//operational_is_su-fficient/coding.md)
+[Coding](/operational_is_su-fficient/coding.md)
 
-[Gitlab Stuff](//operational_is_su-fficient/gitlab_stuff.md)
+[Gitlab Stuff](/operational_is_su-fficient/gitlab_stuff.md)
 
 9+ years Image Processing Engineer, love to call myself: Camera Architecture
 

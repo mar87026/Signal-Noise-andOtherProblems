@@ -37,7 +37,7 @@ work(local_buffer);
 
 可以參考:
 
-[C++ Resource Control Type](/operational_is_su-fficient/coding/pointer//operational_is_su-fficient/coding/pointer/../c++_resource_control_type.md)
+[C++ Resource Control Type](/operational_is_su-fficient/coding/pointer/../c++_resource_control_type.md)
 
 ## 誰擁有資源
 

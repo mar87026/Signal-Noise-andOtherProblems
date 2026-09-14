@@ -10,13 +10,13 @@ Compiler也會額外透過語意去分配stack、register、heap或其他storage
 
 C/C++ development就是操作這些資訊以達到最高效益
 
-[Compiler Logic](/operational_is_su-fficient//operational_is_su-fficient/coding/compiler_logic.md)
+[Compiler Logic](/operational_is_su-fficient/coding/compiler_logic.md)
 
-[BITWISE](/operational_is_su-fficient//operational_is_su-fficient/coding/bitwise.md)
+[BITWISE](/operational_is_su-fficient/coding/bitwise.md)
 
-[Pointer](/operational_is_su-fficient//operational_is_su-fficient/coding/pointer.md)
+[Pointer](/operational_is_su-fficient/coding/pointer.md)
 
-[C++ Basic Type](/operational_is_su-fficient//operational_is_su-fficient/coding/c++_basic_type.md)
+[C++ Basic Type](/operational_is_su-fficient/coding/c++_basic_type.md)
 
 # Lifecycle
 
@@ -95,7 +95,7 @@ int* a = FOO();
 delete[] a;//IMPORTANT!!!
 ```
 
-[Alias : LifeCycle](/operational_is_su-fficient//operational_is_su-fficient/coding/alias_lifecycle.md)
+[Alias : LifeCycle](/operational_is_su-fficient/coding/alias_lifecycle.md)
 
 # RESOURCE
 
@@ -152,11 +152,11 @@ value capacity 1
 
 有大概概念後，來討論ISP處理frame的resource交換吧
 
-[Power-On to Pipeline](/operational_is_su-fficient//operational_is_su-fficient/power-on_to_pipeline.md)
+[Power-On to Pipeline](/operational_is_su-fficient/power-on_to_pipeline.md)
 
 由上面那篇複製了
 
-![image.png](/operational_is_su-fficient//operational_is_su-fficient/coding/image.png)
+![image.png](/operational_is_su-fficient/coding/image.png)
 
 ISP processor透過Memory Control、DMA取得RAM buffer裡儲存的frame資訊，完成操作後，將成果再透過DMA、Memory Control送回RAM buffer；其他processor，例如AI NPU會再走相近路線去RAM把資訊拿出來做相對應的處理。
 
@@ -170,18 +170,18 @@ C是成果，但千萬別和A混在一起放。
 
 #### extend:
 
-[Resource Control: Lock](/operational_is_su-fficient//operational_is_su-fficient/coding/pointer/resource_control_lock.md)
+[Resource Control: Lock](/operational_is_su-fficient/coding/pointer/resource_control_lock.md)
 
-[C++ Resource Control Type](/operational_is_su-fficient//operational_is_su-fficient/coding/c++_resource_control_type.md)
+[C++ Resource Control Type](/operational_is_su-fficient/coding/c++_resource_control_type.md)
 
-[C Type : Group](/operational_is_su-fficient//operational_is_su-fficient/coding/c_type_group.md)
+[C Type : Group](/operational_is_su-fficient/coding/c_type_group.md)
 
-[Unlying Logic : Alignment](/operational_is_su-fficient//operational_is_su-fficient/coding/unlying_logic_alignment.md)
+[Unlying Logic : Alignment](/operational_is_su-fficient/coding/unlying_logic_alignment.md)
 
-[char & string](/operational_is_su-fficient//operational_is_su-fficient/coding/char_&_string.md)
+[char & string](/operational_is_su-fficient/coding/char_&_string.md)
 
-[C & C++](/operational_is_su-fficient//operational_is_su-fficient/coding/c_&_c++.md)
+[C & C++](/operational_is_su-fficient/coding/c_&_c++.md)
 
-[Segmentation fault/Memory Issue](/operational_is_su-fficient//operational_is_su-fficient/coding/segmentation_fault_memory_issue.md)
+[Segmentation fault/Memory Issue](/operational_is_su-fficient/coding/segmentation_fault_memory_issue.md)
 
-[Trouble Shooting](/operational_is_su-fficient//operational_is_su-fficient/coding/trouble_shooting.md)
+[Trouble Shooting](/operational_is_su-fficient/coding/trouble_shooting.md)

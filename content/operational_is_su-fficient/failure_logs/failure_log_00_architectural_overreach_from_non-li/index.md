@@ -2,9 +2,9 @@
 
 *First Architectural Sin*
 
-![image.png](/operational_is_su-fficient/failure_logs//operational_is_su-fficient/failure_logs/failure_log_00_architectural_overreach_from_non-li/image.png)
+![image.png](/operational_is_su-fficient/failure_logs/failure_log_00_architectural_overreach_from_non-li/image.png)
 
-![image.png](/operational_is_su-fficient/failure_logs//operational_is_su-fficient/failure_logs/failure_log_00_architectural_overreach_from_non-li/image_1.png)
+![image.png](/operational_is_su-fficient/failure_logs/failure_log_00_architectural_overreach_from_non-li/image_1.png)
 
 ### 1. The Genesis: The Radical Joint Architecture (Fusion adaptive)
 

@@ -2,7 +2,7 @@
 
 1. Everthing is great, but sub-pages show “404”
 
-![image.png](/operational_is_su-fficient/gitlab_stuff//operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image.png)
+![image.png](/operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image.png)
 
 make sure your path is non-blank, no any type of apostrophe and all in lowercase.
 
@@ -10,18 +10,18 @@ make sure your path is non-blank, no any type of apostrophe and all in lowercase
 
 clicked at sidebar
 
-![image.png](/operational_is_su-fficient/gitlab_stuff//operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image_1.png)
+![image.png](/operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image_1.png)
 
 only operated from the link on mainpage.
 
-![image.png](/operational_is_su-fficient/gitlab_stuff//operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image_2.png)
+![image.png](/operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image_2.png)
 
 The solution is creating an index.md whose content is same as the file named as the folder.
 
 1. THE DISPEARED IMAGES:
 The path on html is like
     
-    ![image.png](/operational_is_su-fficient/gitlab_stuff//operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image_3.png)
+    ![image.png](/operational_is_su-fficient/gitlab_stuff/failure_logs_qaurtz/image_3.png)
     
 
 However, the right site is : 
