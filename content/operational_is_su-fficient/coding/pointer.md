@@ -82,7 +82,7 @@ extend:
 
 [Linked List](/operational_is_su-fficient/coding/pointer/linked_list.md)
 
-[Swap: switch the ownership](/operational_is_su-fficient/coding/pointer/swap_switch_the_ownership.md)
+[Resource Control: Lock](/operational_is_su-fficient/coding/pointer/resource_control_lock.md)
 
 那代表其實b可以轉指向其他物件的address，我要怎麼確保指向固定呢?
 
@@ -94,7 +94,7 @@ extend:
 
 | status |  |  | 改動的是誰 |
 | --- | --- | --- | --- |
-| const int **b ⇒ (const int)**b | b 是個pointer，指向const int | *b指向的int不能被b修改，但可以b = &s | pointer物件的值 |
-| int const **b ⇒ (int const)**b |  |  | pointer物件的值 |
+| const int *b ⇒ (const int)*b | b 是個pointer，指向const int | *b指向的int不能被b修改，但可以b = &s | pointer物件的值 |
+| int const *b ⇒ (int const)*b |  |  | pointer物件的值 |
 | int *const b | b是個const pointer指向int | b不能修改但*b = 20可以 | caller的值 |
 | const *int b | b是個int pointer ，並為不可動的常數 | b不可以修改，但*b = 15 可以 | caller的值 |

@@ -47,5 +47,9 @@ N pairs of data | dominate | be careful of clock sync | 2.5G to 4.5G |
 no clock, hiding clock in path | really really high speed | expensive
 high complexity | 80Msp to 8.0Gsps |
 | Deploy above 100MP resolution |  |  |  |  |  |
+| DP | DisplayPort  |  | Support High fresh framerate |  |  |
+|  |  |  |  |  |  |
+| HDMI |  |  |  |  |  |
+|  |  |  |  |  |  |
 | PCle | Peripheral Component Interconnect Express | 4x, depends on version | could support edge computing while connecting with AI recognition | super expensive | **PCIe 4.0** 16 GT/s32 GB/s ~7,500 MB/s |
 | Server, Computer, game console and high level UAV. |  |  |  |  |  |

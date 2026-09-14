@@ -170,13 +170,15 @@ C是成果，但千萬別和A混在一起放。
 
 #### extend:
 
-[Swap: switch the ownership](/operational_is_su-fficient/coding/pointer/swap_switch_the_ownership.md)
+[Resource Control: Lock](/operational_is_su-fficient/coding/pointer/resource_control_lock.md)
 
 [C++ Resource Control Type](/operational_is_su-fficient/coding/c++_resource_control_type.md)
 
 [C Type : Group](/operational_is_su-fficient/coding/c_type_group.md)
 
 [Unlying Logic : Alignment](/operational_is_su-fficient/coding/unlying_logic_alignment.md)
+
+[char & string](/operational_is_su-fficient/coding/char_&_string.md)
 
 [C & C++](/operational_is_su-fficient/coding/c_&_c++.md)
 

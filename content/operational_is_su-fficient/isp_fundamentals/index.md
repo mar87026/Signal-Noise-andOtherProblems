@@ -12,3 +12,5 @@ ISP Tuning and Algorithm Design Are Two Different Disciplines*
 [Defog - Dark_Channel_Prior_1 : Thought and Reality](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_1_thought_and_reality.md)
 
 [Defog - Dark_Channel_Prior_2:Basic model and Cover by Object Distance](/operational_is_su-fficient/isp_fundamentals/defog_-_dark_channel_prior_2_basic_model_and_cover.md)
+
+[MSX](/operational_is_su-fficient/isp_fundamentals/msx.md)

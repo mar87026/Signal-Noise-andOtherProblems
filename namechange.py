@@ -11,10 +11,8 @@ def normalize_name(name, name_map_list):
         name = name.replace('%20' + key, '').replace(' ' + key, '').replace(key, '')
     pattern = '|'.join(map(re.escape, replace_to_baseline))
     name = re.sub(pattern, '_', name)
-    
 
     return name.lower()
-
 
 def to_lower_path(match, name_map):
     title = match.group(1)  # catch header
@@ -24,6 +22,41 @@ def to_lower_path(match, name_map):
     path_out = '/'.join(cleaned_parts)
     return f"[{title}]({path_out.lower()})"
 
+def fix_notion_formatting(content):
+
+    content = re.sub(r'<mark style="background:(.*?);">(.*?)</mark>', r'<mark style="background:\1;">\2</mark>', content)
+
+    lines = content.split('\n')
+    fixed_lines = []
+    in_table = False
+    
+    for line in lines:
+        stripped = line.strip()
+
+        if stripped.startswith('|') and stripped.endswith('|'):
+            in_table = True
+            fixed_lines.append(line)
+
+        elif in_table and stripped != '' and not stripped.startswith('|'):
+            if fixed_lines and fixed_lines[-1].strip().endswith('|'):
+                prev_line = fixed_lines[-1].rstrip()
+                new_text = stripped
+
+                if new_text.endswith('|'):
+                    new_text = new_text[:-1]
+
+                fixed_lines[-1] = prev_line[:-1] + "<br>" + new_text + "|"
+            else:
+                fixed_lines.append(line)
+                
+        elif stripped == '':
+            in_table = False
+            fixed_lines.append(line)
+        else:
+            in_table = False
+            fixed_lines.append(line)
+            
+    return '\n'.join(fixed_lines)
 
 def deep_clean():
     current_dir = os.getcwd()
