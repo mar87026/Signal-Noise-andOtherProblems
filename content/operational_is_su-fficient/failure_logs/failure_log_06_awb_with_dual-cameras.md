@@ -10,7 +10,7 @@ Under normal operation, AWB estimated the white balance gain primarily from one 
 
 However, problems occurred during rapid scene changes, and also, the color performance could’t violate the Planckian Locus.
 
-![image.png](/operational_is_su-fficient/failure_logs/failure_log_06_awb_with_dual-cameras/image.png)
+![image.png](/operational_is_su-fficient/failure_logs//operational_is_su-fficient/failure_logs/failure_log_06_awb_with_dual-cameras/image.png)
 
 ## AWB Pipeline:
 
@@ -29,4 +29,4 @@ The key idea is that white balance should not react immediately to every measure
 
 #### Extension:
 
-[When HDR breaks White Balance](/operational_is_su-fficient/failure_logs/../algorithm_strategies/when_hdr_breaks_white_balance.md)
+[When HDR breaks White Balance](/operational_is_su-fficient/failure_logs//operational_is_su-fficient/failure_logs/../algorithm_strategies/when_hdr_breaks_white_balance.md)

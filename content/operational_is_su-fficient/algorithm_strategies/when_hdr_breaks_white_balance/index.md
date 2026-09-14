@@ -15,10 +15,10 @@ To mitigate this, standard practice applies a preliminary White Balance (Pre-WB)
 1. The blending module correctly propagates the applied gain values down the pipeline.
 2. The blending logic operates strictly within the **linear domain**.
 
-![image.png](/operational_is_su-fficient/algorithm_strategies/when_hdr_breaks_white_balance/image.png)
+![image.png](/operational_is_su-fficient/algorithm_strategies//operational_is_su-fficient/algorithm_strategies/when_hdr_breaks_white_balance/image.png)
 
 If the signal passes through **non-linear modules**—such as Local Tone Mapping (LTM) or adaptive histogram equalization (like CLAHE)—the original linear relationship between RGB values no longer exists. Reconstructing a physically meaningful white balance estimate requires either explicit inverse mapping or auxiliary metadata from upstream modules, both of which significantly increase implementation complexity. Besides, it’s also computationally expensive and overwhelmingly complex to reconstruct.
 
 Extend:
 
-[Failure Log 00 | Architectural Overreach: From Non-Linear WDR-LTM to Grid-Based Linear Pipeline](/operational_is_su-fficient/algorithm_strategies/../failure_logs/failure_log_00_architectural_overreach_from_non-li.md)
+[Failure Log 00 | Architectural Overreach: From Non-Linear WDR-LTM to Grid-Based Linear Pipeline](/operational_is_su-fficient/algorithm_strategies//operational_is_su-fficient/algorithm_strategies/../failure_logs/failure_log_00_architectural_overreach_from_non-li.md)

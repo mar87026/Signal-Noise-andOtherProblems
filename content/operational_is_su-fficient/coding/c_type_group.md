@@ -11,6 +11,6 @@
 
 但如果我們多次使用這些結構，但又希望資料能串連起來，就可以用上 
 
-[Linked List](/operational_is_su-fficient/coding/pointer/linked_list.md)
+[Linked List](/operational_is_su-fficient/coding//operational_is_su-fficient/coding/pointer/linked_list.md)
 
 但這解決不了記憶體不連續的問題，不同的Linked List還是可以會落在不同記憶體上(contiguity)、還有alignment問題

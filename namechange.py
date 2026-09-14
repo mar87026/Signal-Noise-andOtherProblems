@@ -106,9 +106,8 @@ def deep_clean():
                 file_path = os.path.join(root, filename)
                 with open(file_path, "r", encoding="utf-8") as f:
                     content = f.read()
-                
-                new_content = content
 
+                new_content = fix_notion_formatting(content)
                 for keys in name_map:
                     if keys in new_content:
                         new_content = new_content.replace('%20'+keys, '')

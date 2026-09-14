@@ -1,6 +1,6 @@
 # Color fidelity expectations
 
-![image.png](/operational_is_su-fficient/vision_quality_standard/color_fidelity_expectations/image.png)
+![image.png](/operational_is_su-fficient/vision_quality_standard//operational_is_su-fficient/vision_quality_standard/color_fidelity_expectations/image.png)
 
 | Name | description |
 | --- | --- |

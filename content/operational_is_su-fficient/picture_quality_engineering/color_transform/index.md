@@ -2,4 +2,4 @@
 
 依照Sensor型態而有不同
 
-[RCCC](/operational_is_su-fficient/picture_quality_engineering/color_transform/rccc.md)
+[RCCC](/operational_is_su-fficient/picture_quality_engineering//operational_is_su-fficient/picture_quality_engineering/color_transform/rccc.md)

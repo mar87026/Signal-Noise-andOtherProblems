@@ -9,4 +9,4 @@
 | frame rate/fps | 幀率 |  |
 |  |  |  |
 
-[Color fidelity expectations](/operational_is_su-fficient/vision_quality_standard/color_fidelity_expectations.md)
+[Color fidelity expectations](/operational_is_su-fficient//operational_is_su-fficient/vision_quality_standard/color_fidelity_expectations.md)
