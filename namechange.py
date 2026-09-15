@@ -23,37 +23,43 @@ def to_lower_path(match, name_map):
     return f"[{title}]({path_out.lower()})"
 
 def fix_notion_formatting(content):
-
+    # 1. 統一顏色標籤格式
     content = re.sub(r'<mark style="background:(.*?);">(.*?)</mark>', r'<mark style="background:\1;">\2</mark>', content)
 
+    # 2. 自動修復 Notion 表格內的異常換行 (緩衝區捕捉法)
     lines = content.split('\n')
     fixed_lines = []
-    in_table = False
+    buffer = []
+    in_broken_row = False
     
     for line in lines:
         stripped = line.strip()
-
-        if stripped.startswith('|') and stripped.endswith('|'):
-            in_table = True
-            fixed_lines.append(line)
-
-        elif in_table and stripped != '' and not stripped.startswith('|'):
-            if fixed_lines and fixed_lines[-1].strip().endswith('|'):
-                prev_line = fixed_lines[-1].rstrip()
-                new_text = stripped
-
-                if new_text.endswith('|'):
-                    new_text = new_text[:-1]
-
-                fixed_lines[-1] = prev_line[:-1] + "<br>" + new_text + "|"
-            else:
-                fixed_lines.append(line)
+        
+        # 情況 A：如果目前正在收集中斷的表格列
+        if in_broken_row:
+            buffer.append(line)
+            # 如果這行結尾終於出現了 '|'，代表這列結束了
+            if stripped.endswith('|'):
+                # 把緩衝區內收集到的所有斷行片段，用 <br> 完美縫合
+                merged_row = " <br> ".join([b.strip() for b in buffer])
+                fixed_lines.append(merged_row)
                 
-        elif stripped == '':
-            in_table = False
-            fixed_lines.append(line)
+                # 清空緩衝區，準備迎接下一行
+                buffer = []
+                in_broken_row = False
+            continue
+
+        # 情況 B：如果目前不在中斷的列中
+        if stripped.startswith('|'):
+            if stripped.endswith('|'):
+                # 正常的單行表格列，直接加入
+                fixed_lines.append(line)
+            else:
+                # 開頭是 '|' 但結尾不是 '|'，這就是 Notion 斷行表格的開頭
+                in_broken_row = True
+                buffer.append(line)
         else:
-            in_table = False
+            # 一般文字或空行，直接放行
             fixed_lines.append(line)
             
     return '\n'.join(fixed_lines)
@@ -116,9 +122,15 @@ def deep_clean():
                     text_content = match.group(1)
                     path_content = match.group(2)
 
-                    target_dir = path_content.split("/")[0]
-                    
+                    # 1. 過濾掉空字串，避免絕對路徑開頭的 '/' 造成 target_dir 變成空字串
+                    path_parts = [p for p in path_content.split("/") if p]
+                    if not path_parts:
+                        return match.group(0)
+
+                    target_dir = path_parts[0]
                     new_name = normalize_name(target_dir, name_map)
+                    
+                    # 2. 檢查目標資料夾是否真實存在於「當前目錄」下
                     if os.path.exists(os.path.join(root, new_name)):
                         root_parts = root.replace("\\", "/").split("/")
                         try:
@@ -130,14 +142,15 @@ def deep_clean():
                             prefix_parts = []
                          
                         prefix = "/" + "/".join(prefix_parts) + "/" if prefix_parts else "/"
-
-                        cleaned_path = "/".join([normalize_name(p, name_map) for p in path_content.split("/")])
+                        # 使用過濾後的 path_parts 重組，避免結尾或開頭多出多餘斜線
+                        cleaned_path = "/".join([normalize_name(p, name_map) for p in path_parts])
 
                         return f"[{text_content}]({prefix}{cleaned_path})"
-                    return match.group(0)
-
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", link_update, new_content)
-                new_content = re.sub(r"\[([^\]]+)\]\(([^)]+)\)", lambda m :to_lower_path(m , name_map), new_content)
+                    
+                    # 3. 如果是絕對路徑或其他狀況，直接清理並消除雙斜線 (//)
+                    cleaned_path = "/".join([normalize_name(p, name_map) for p in path_content.split("/")])
+                    cleaned_path = cleaned_path.replace("//", "/")
+                    return f"[{text_content}]({cleaned_path})"
                 
                 if new_content != content:
                     with open(file_path, "w", encoding="utf-8") as f:

@@ -6,8 +6,7 @@ C/C++的object有各種型態，但都有共同的lifecylce、address、state/va
 
 | name | profile | ini | base | inform in | inform out | copy | find |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| vector | 可以動態調整大小的陣列升級版 | vector<int> a (25, 0);
-vector<int> a (b); |  |  |  |  | find(a.begin()+i, a.end(), k); |
+| vector | 可以動態調整大小的陣列升級版 | vector<int> a (25, 0); <br> vector<int> a (b); |  |  |  |  | find(a.begin()+i, a.end(), k); |
 | map | 有序，自動排序 |  |  | O(log n) |  |  | O(log n) |
 | unordered_map | 無序 |  |  |  |  |  | O(1) |
 | set | 有序，不允許元素重複 |  |  |  |  |  |  |

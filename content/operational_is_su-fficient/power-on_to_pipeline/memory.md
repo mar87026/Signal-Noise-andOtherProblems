@@ -17,7 +17,6 @@
 
 LPDPR
 
-| SSD
-=NAND+Controller+FW+interface | 一套儲存裝置，長期儲存，斷電不會損失資料；存取速度比RAM慢得多 | 相對於RAM，它像是raw檔、已儲存好的檔案；而RAM像是演算法或是軟體的buffer，少前者只能靠即時輸入執行，少後者則是完全跑不動 |
+| SSD <br> =NAND+Controller+FW+interface | 一套儲存裝置，長期儲存，斷電不會損失資料；存取速度比RAM慢得多 | 相對於RAM，它像是raw檔、已儲存好的檔案；而RAM像是演算法或是軟體的buffer，少前者只能靠即時輸入執行，少後者則是完全跑不動 |
 | --- | --- | --- |
 | HDD |  |  |

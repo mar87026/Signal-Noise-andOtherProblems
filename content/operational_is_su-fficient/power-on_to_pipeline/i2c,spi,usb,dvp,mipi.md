@@ -9,43 +9,19 @@ Note:
 
 | Abbreviation | Full Name | Lines number | Advantage | Defect | Speed Limit |
 | --- | --- | --- | --- | --- | --- |
-| I2C | Inter-Integrated Circuit | 2
-clock
-data | only 2 pins
-simple | read can’t synced with write | about 3.4M
-usually 400kps |
+| I2C | Inter-Integrated Circuit | 2 <br> clock <br> data | only 2 pins <br> simple | read can’t synced with write | about 3.4M <br> usually 400kps |
 | Wake up sensors, change the registers’ value. |  |  |  |  |  |
-| SPI | Serial Peripheral Interface | 4
-clock
-Master Out Slave In
-Master In Slave out
-Chip Select | read and write in same time. | Add any item, add one CS line for transmission | usually 50M |
+| SPI | Serial Peripheral Interface | 4 <br> clock <br> Master Out Slave In <br> Master In Slave out <br> Chip Select | read and write in same time. | Add any item, add one CS line for transmission | usually 50M |
 | transmit OSD inform which shown on screen and return IMU inform |  |  |  |  | p |
-| USB | **U**niversal **S**erial **B**us | 4
-power
-D+
-D-
-GND | support 
-Hot-Plugging
-Plug and Play
-Power Delivery | Protocol Overhead
-Master CPU cost
-short transmission distance |  |
-| USB(2.0) | 480M in theory
-320M in practice |  |  |  |  |
+| USB | **U**niversal **S**erial **B**us | 4 <br> power <br> D+ <br> D- <br> GND | support <br> Hot-Plugging <br> Plug and Play <br> Power Delivery | Protocol Overhead <br> Master CPU cost <br> short transmission distance |  |
+| USB(2.0) | 480M in theory <br> 320M in practice |  |  |  |  |
 | USB(3.0) |  |  |  |  |  |
 | Transmitted the IR inform |  |  |  |  |  |
-| DVP(parallel) | Digital Video Port | 8-12
-HSYNC and VSYNC | Easy to follow | Low
-sure to support 4K frame, but EMI would ruin everything. | < 150 Mbps |
+| DVP(parallel) | Digital Video Port | 8-12 <br> HSYNC and VSYNC | Easy to follow | Low <br> sure to support 4K frame, but EMI would ruin everything. | < 150 Mbps |
 | simple MCU, toy camera |  |  |  |  |  |
-| MIPI(D-PHY) | Mobile Industry Processor Interface | 1+N
-clock
-N pairs of data | dominate | be careful of clock sync | 2.5G to 4.5G |
+| MIPI(D-PHY) | Mobile Industry Processor Interface | 1+N <br> clock <br> N pairs of data | dominate | be careful of clock sync | 2.5G to 4.5G |
 | transmit 4K video, 1080p60 frames and multi-sensor inform |  |  |  |  |  |
-| MIPI(C-PHY) | Mobile Industry Processor Interface | 3
-no clock, hiding clock in path | really really high speed | expensive
-high complexity | 80Msp to 8.0Gsps |
+| MIPI(C-PHY) | Mobile Industry Processor Interface | 3 <br> no clock, hiding clock in path | really really high speed | expensive <br> high complexity | 80Msp to 8.0Gsps |
 | Deploy above 100MP resolution |  |  |  |  |  |
 | DP | DisplayPort  |  | Support High fresh framerate |  |  |
 |  |  |  |  |  |  |
