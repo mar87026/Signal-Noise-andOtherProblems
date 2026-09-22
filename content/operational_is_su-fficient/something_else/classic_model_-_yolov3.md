@@ -28,12 +28,9 @@
 | 小框與大框對目標的差異 | 大對大，小對小 |
 | Ground Truth的品質怎樣算好? | Target在畫面中的大小最好廣泛分布 |
 | 要怎麼判斷是不是overfitting | loss正常要隨著訓練次數下降，但如果train的loss上升，而val下降，則有overfitting的可能 |
-| 為什麼要對資料集做k-means找出代表九格，有什麼意義 |   1. The represent anchor boxes stand for the datasets' siduation. simliar as the size L, M ,XL in clothes. it can be classify the image/feature group quickly in practice. 
-  2. 2. display the cover range of dataset: it's very close bw 2 sets of anchors, maybe we should add something new. |
+| 為什麼要對資料集做k-means找出代表九格，有什麼意義 |   1. The represent anchor boxes stand for the datasets' siduation. simliar as the size L, M ,XL in clothes. it can be classify the image/feature group quickly in practice. <br> 2. 2. display the cover range of dataset: it's very close bw 2 sets of anchors, maybe we should add something new. |
 
-| 指令與參數 train | python [train.py](http://train.py/) --img 640 --batch 32 --epochs 220 
---data your.yaml --weights [yolov3-tiny.pt](http://yolov3-tiny.pt/) 
---hyp hyp.scratch-low.yaml --cos-lr --label-smoothing 0.1 |
+| 指令與參數 train | python [train.py](http:/train.py/) --img 640 --batch 32 --epochs 220 <br> --data your.yaml --weights [yolov3-tiny.pt](http:/yolov3-tiny.pt/) <br> --hyp hyp.scratch-low.yaml --cos-lr --label-smoothing 0.1 |
 | --- | --- |
 | img | 訓練時的影像尺寸，640代表輸入影像為640*640；以最長邊符合設定，另一邊則等比例縮放；若640*480的畫面設定480，長邊原640縮為480，原480則等比例變360，360不足480則上下各padding 60灰邊補足。 |
 | batch | 每次訓練的批次大小，YOLOv3-tiny通常能用大一點的batch size |
@@ -44,7 +41,7 @@
 | cos-lr | 餘弦學習率調整 |
 | label-smoothing | 分類之間的差異平滑化，不以是與否強制分類；目的是降低overfitting |
 
-| 指令與參數 detect | python [detect.py](http://detect.py/) --weights [best.pt](http://best.pt/) --source path/to/images |
+| 指令與參數 detect | python [detect.py](http:/detect.py/) --weights [best.pt](http:/best.pt/) --source path/to/images |
 | --- | --- |
 | weights  |  |
 

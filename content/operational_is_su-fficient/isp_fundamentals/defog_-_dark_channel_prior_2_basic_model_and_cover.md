@@ -50,7 +50,7 @@ $$
 
 For an N-pixel color image I, there are 3N constraints and 4N+3 unknowns.
 
-> [Single image haze removal using dark channel prior | IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/document/5206515)
+> [Single image haze removal using dark channel prior | IEEE Conference Publication | IEEE Xplore](https:/ieeexplore.ieee.org/document/5206515)
 > 
 
 [But what’s x ①? Is it the distance to object or the 2D location?  Is A an amplitude **②**?] Let split the formula in detail.
@@ -72,7 +72,7 @@ $L_{\infty}$(A) is the atmospheric light, which is commonly assumed to be global
 β is the atmospheric attenuation coefficient. 
 d is the distance between an object in the image and the observer.
 
-> [Visibility in bad weather from a single image | IEEE Conference Publication | IEEE Xplore](https://ieeexplore.ieee.org/document/4587643)
+> [Visibility in bad weather from a single image | IEEE Conference Publication | IEEE Xplore](https:/ieeexplore.ieee.org/document/4587643)
 > 
 
 #### Now, we have the conditions:

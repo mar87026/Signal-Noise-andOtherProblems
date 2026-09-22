@@ -16,3 +16,5 @@ Rememeber: Algorithm and Tuning are different.*
 [Fast Root Cause Isolation for Image Quality Issues](/operational_is_su-fficient/picture_quality_engineering/fast_root_cause_isolation_for_image_quality_issues.md)
 
 [PQ - Parking Lot Surveillance](/operational_is_su-fficient/picture_quality_engineering/pq_-_parking_lot_surveillance.md)
+
+[Inspiration as Flicker](/operational_is_su-fficient/picture_quality_engineering/inspiration_as_flicker.md)

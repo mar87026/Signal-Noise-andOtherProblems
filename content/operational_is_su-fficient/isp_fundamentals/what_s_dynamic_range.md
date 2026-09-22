@@ -7,5 +7,4 @@
 
 | Slanted-edge Method |
 | --- |
-| 計算MTF，用斜邊法可一張圖產生一個MTF曲線
-多個亮度可以拍攝能計算HDR db值的slope based |
+| 計算MTF，用斜邊法可一張圖產生一個MTF曲線 <br> 多個亮度可以拍攝能計算HDR db值的slope based |

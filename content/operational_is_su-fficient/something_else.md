@@ -3,6 +3,8 @@
 *“Artificial Intelligence”
 Don't wait until you "know everything" to challenge. You will never know everything.*
 
+[What’s in report](/operational_is_su-fficient/something_else/what_s_in_report.md)
+
 [Classification-Nearest Neighbors](/operational_is_su-fficient/something_else/classification-nearest_neighbors.md)
 
 [Classification-hyperplane](/operational_is_su-fficient/something_else/classification-hyperplane.md)
@@ -16,8 +18,6 @@ Don't wait until you "know everything" to challenge. You will never know everyth
 [Classic Model - BlazeFace](/operational_is_su-fficient/something_else/classic_model_-_blazeface.md)
 
 [LOSS](/operational_is_su-fficient/something_else/loss.md)
-
-[What’s in report](/operational_is_su-fficient/something_else/what_s_in_report.md)
 
 [TroubleShooting](/operational_is_su-fficient/something_else/troubleshooting.md)
 

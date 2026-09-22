@@ -16,7 +16,7 @@ This step is focusing on the wake the sensors up, and sync all of them. Especial
 
 ### Transmission Detail:
 
-[I2C,SPI,USB,DVP,MIPI](/operational_is_su-fficient/power-on_to_pipeline/i2c,spi,usb,dvp,mipi.md)
+[UART,I2C,SPI,USB,DVP,MIPI,HDMI](/operational_is_su-fficient/power-on_to_pipeline/uart,i2c,spi,usb,dvp,mipi,hdmi.md)
 
 ## Streaming In
 
